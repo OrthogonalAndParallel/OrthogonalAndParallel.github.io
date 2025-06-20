@@ -1,0 +1,758 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" /><meta name="generator" content="VuePress 2.0.0-rc.18" /><meta name="theme" content="VuePress Theme Plume " /><script id="check-mac-os">document.documentElement.classList.toggle('mac', /Mac|iPhone|iPod|iPad/i.test(navigator.platform))</script><script id="check-dark-mode">;(function () {const um= localStorage.getItem('vuepress-theme-appearance') || 'auto';const sm = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;const isDark = um === 'dark' || (um !== 'light' && sm);document.documentElement.dataset.theme = isDark ? 'dark' : 'light';})();</script><meta property="og:url" content="https://orthogonalandparallel.github.io/%E8%AF%AD%E8%A8%80/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"><meta property="og:site_name" content="万里任禅游"><meta property="og:title" content="多线程"><meta property="og:description" content="线程 属性 创建 分组 方法 问题 锁"><meta property="og:type" content="article"><meta property="og:locale" content="zh-CN"><meta property="og:updated_time" content="2025-06-20T08:30:00.000Z"><meta property="article:modified_time" content="2025-06-20T08:30:00.000Z"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"多线程","image":[""],"dateModified":"2025-06-20T08:30:00.000Z","author":[]}</script><title>多线程 | 万里任禅游</title><meta name="description" content="线程 属性 创建 分组 方法 问题 锁"><link rel="preload" href="/assets/style-BUrBbMmp.css" as="style"><link rel="stylesheet" href="/assets/style-BUrBbMmp.css"><link rel="modulepreload" href="/assets/app-CSjlw16A.js"><link rel="modulepreload" href="/assets/index.html--sWQocua.js"><link rel="prefetch" href="/assets/index.html-DnfN30Bv.js" as="script"><link rel="prefetch" href="/assets/index.html-CmfS9_-H.js" as="script"><link rel="prefetch" href="/assets/index.html-DQ4-UBAR.js" as="script"><link rel="prefetch" href="/assets/index.html-rGzSXbMS.js" as="script"><link rel="prefetch" href="/assets/index.html-B-AcMUw9.js" as="script"><link rel="prefetch" href="/assets/index.html-CC85riv-.js" as="script"><link rel="prefetch" href="/assets/index.html-CI-x8R0a.js" as="script"><link rel="prefetch" href="/assets/index.html-fe2mVR2F.js" as="script"><link rel="prefetch" href="/assets/index.html-qk3bUOkY.js" as="script"><link rel="prefetch" href="/assets/index.html-DwhjsPeO.js" as="script"><link rel="prefetch" href="/assets/index.html-De3EhYaL.js" as="script"><link rel="prefetch" href="/assets/index.html-ClwodYvU.js" as="script"><link rel="prefetch" href="/assets/index.html-BZ1FnBty.js" as="script"><link rel="prefetch" href="/assets/index.html-CucR8Sa8.js" as="script"><link rel="prefetch" href="/assets/index.html-D7xyQIvY.js" as="script"><link rel="prefetch" href="/assets/index.html-BiTDHR5S.js" as="script"><link rel="prefetch" href="/assets/index.html-DrVIwIoM.js" as="script"><link rel="prefetch" href="/assets/index.html-Ds_4LacA.js" as="script"><link rel="prefetch" href="/assets/index.html-ByRvbXIx.js" as="script"><link rel="prefetch" href="/assets/index.html-CAyJS137.js" as="script"><link rel="prefetch" href="/assets/index.html-eJW6tDE8.js" as="script"><link rel="prefetch" href="/assets/index.html-J7F-eri4.js" as="script"><link rel="prefetch" href="/assets/index.html-Unu889BU.js" as="script"><link rel="prefetch" href="/assets/index.html-BuO_4Kqe.js" as="script"><link rel="prefetch" href="/assets/index.html-YE0Vp9Oc.js" as="script"><link rel="prefetch" href="/assets/index.html-CvMPAZ3Z.js" as="script"><link rel="prefetch" href="/assets/index.html-a8VFbQIz.js" as="script"><link rel="prefetch" href="/assets/index.html-BemOjmVo.js" as="script"><link rel="prefetch" href="/assets/index.html-BttSd7Ph.js" as="script"><link rel="prefetch" href="/assets/index.html-y5boHE48.js" as="script"><link rel="prefetch" href="/assets/index.html-BGVmmSvg.js" as="script"><link rel="prefetch" href="/assets/index.html-BdimQIKq.js" as="script"><link rel="prefetch" href="/assets/index.html-BZcIgSQP.js" as="script"><link rel="prefetch" href="/assets/index.html-WN4Qm1oh.js" as="script"><link rel="prefetch" href="/assets/index.html-wMmHukeS.js" as="script"><link rel="prefetch" href="/assets/index.html-kf8eqImD.js" as="script"><link rel="prefetch" href="/assets/index.html-CuwJ8rfk.js" as="script"><link rel="prefetch" href="/assets/index.html-D9pE4M19.js" as="script"><link rel="prefetch" href="/assets/index.html-jMYmQeEu.js" as="script"><link rel="prefetch" href="/assets/index.html-CGJMa5gF.js" as="script"><link rel="prefetch" href="/assets/index.html-yM0d8wGm.js" as="script"><link rel="prefetch" href="/assets/index.html-BqqKEthp.js" as="script"><link rel="prefetch" href="/assets/index.html-DqUAyTrM.js" as="script"><link rel="prefetch" href="/assets/index.html-jtby6ogn.js" as="script"><link rel="prefetch" href="/assets/index.html-DzYW5Umx.js" as="script"><link rel="prefetch" href="/assets/index.html-WjRSAwIA.js" as="script"><link rel="prefetch" href="/assets/index.html-CksgAfsX.js" as="script"><link rel="prefetch" href="/assets/index.html-CIAJ2nbv.js" as="script"><link rel="prefetch" href="/assets/index.html-C2G1lFgr.js" as="script"><link rel="prefetch" href="/assets/index.html-BpOfQT9r.js" as="script"><link rel="prefetch" href="/assets/index.html-DeKxBtPo.js" as="script"><link rel="prefetch" href="/assets/index.html-Dp4iLlDi.js" as="script"><link rel="prefetch" href="/assets/index.html-B1j5a_4A.js" as="script"><link rel="prefetch" href="/assets/index.html-BMXUyxQ2.js" as="script"><link rel="prefetch" href="/assets/index.html-D92K0Bdt.js" as="script"><link rel="prefetch" href="/assets/index.html-Da5mAuov.js" as="script"><link rel="prefetch" href="/assets/index.html-BKJmB7Zu.js" as="script"><link rel="prefetch" href="/assets/index.html-no6gOnQD.js" as="script"><link rel="prefetch" href="/assets/index.html-BlwB_5pb.js" as="script"><link rel="prefetch" href="/assets/index.html-Crjhp0l0.js" as="script"><link rel="prefetch" href="/assets/index.html-c3JY-MRS.js" as="script"><link rel="prefetch" href="/assets/index.html-CQXgseWm.js" as="script"><link rel="prefetch" href="/assets/index.html-BAKsdYCy.js" as="script"><link rel="prefetch" href="/assets/index.html--JmrpZst.js" as="script"><link rel="prefetch" href="/assets/index.html-CBjy7zfC.js" as="script"><link rel="prefetch" href="/assets/index.html-BVeir3LW.js" as="script"><link rel="prefetch" href="/assets/index.html-CoBYKpf5.js" as="script"><link rel="prefetch" href="/assets/index.html-66PTMOWf.js" as="script"><link rel="prefetch" href="/assets/index.html-DGje9Sr1.js" as="script"><link rel="prefetch" href="/assets/index.html-4I3gkIT1.js" as="script"><link rel="prefetch" href="/assets/index.html-BM5Tv0FB.js" as="script"><link rel="prefetch" href="/assets/index.html-n9wvVlYT.js" as="script"><link rel="prefetch" href="/assets/index.html-DeYeP6KI.js" as="script"><link rel="prefetch" href="/assets/index.html-JO0MBJ9z.js" as="script"><link rel="prefetch" href="/assets/index.html-wHPwc18q.js" as="script"><link rel="prefetch" href="/assets/index.html-DkzD2LUO.js" as="script"><link rel="prefetch" href="/assets/index.html-SZgokjOJ.js" as="script"><link rel="prefetch" href="/assets/index.html-DSJR5Uak.js" as="script"><link rel="prefetch" href="/assets/index.html-CdpduIb-.js" as="script"><link rel="prefetch" href="/assets/index.html-DtThPlc1.js" as="script"><link rel="prefetch" href="/assets/index.html-DmEYF7la.js" as="script"><link rel="prefetch" href="/assets/index.html-1_zWT6wd.js" as="script"><link rel="prefetch" href="/assets/index.html-C4v-HJe9.js" as="script"><link rel="prefetch" href="/assets/index.html-BTizWBUT.js" as="script"><link rel="prefetch" href="/assets/index.html-ZGGvmjht.js" as="script"><link rel="prefetch" href="/assets/index.html-D1g5hg99.js" as="script"><link rel="prefetch" href="/assets/index.html-Go_9cl_s.js" as="script"><link rel="prefetch" href="/assets/index.html-ChF_AVWS.js" as="script"><link rel="prefetch" href="/assets/404.html-ChY4mKuc.js" as="script"><link rel="prefetch" href="/assets/index.html-CytLRaeB.js" as="script"><link rel="prefetch" href="/assets/index.html-DtsP0dOf.js" as="script"><link rel="prefetch" href="/assets/index.html-t21gJFwX.js" as="script"><link rel="prefetch" href="/assets/index.html-D0aj9aH-.js" as="script"><link rel="prefetch" href="/assets/photoswipe.esm-GXRgw7eJ.js" as="script"><link rel="prefetch" href="/assets/searchBox-default-Dcb3vJSE.js" as="script"><link rel="prefetch" href="/assets/SearchBox-BU1oBFXf.js" as="script"><link rel="prefetch" href="/assets/giscus-BZxmVUME.js" as="script"><link rel="prefetch" href="/assets/setupDevtools-7MC2TMWH-cyCi6dbu.js" as="script"></head><body><div id="app"><!--[--><!--[--><div class="theme-plume vp-layout" vp-container data-v-6215af77><!--[--><!--[--><!--]--><!--[--><span tabindex="-1" data-v-d3d7b61e></span><a href="#VPContent" class="vp-skip-link visually-hidden" data-v-d3d7b61e> Skip to content </a><!--]--><!----><header class="vp-nav" data-v-6215af77 data-v-b22edc8e><div class="vp-navbar" vp-navbar data-v-b22edc8e data-v-f3bacbcd><div class="wrapper" data-v-f3bacbcd><div class="container" data-v-f3bacbcd><div class="title" data-v-f3bacbcd><div class="vp-navbar-title has-sidebar" data-v-f3bacbcd data-v-b68d4852><a class="vp-link no-icon link title" href="/" data-v-b68d4852 data-v-2871b571><!--[--><!--[--><!--]--><!--[--><!--[--><!--[--><img class="vp-image dark logo" src="/images/logo.png" alt data-v-b655b84a><!--]--><!--[--><img class="vp-image light logo" src="/images/logo.png" alt data-v-b655b84a><!--]--><!--]--><!--]--><span data-v-b68d4852>万里任禅游</span><!--[--><!--]--><!--]--><!----></a></div></div><div class="content" data-v-f3bacbcd><div class="content-body" data-v-f3bacbcd><!--[--><!--]--><div class="vp-navbar-search search" data-v-f3bacbcd><div class="search-wrapper" data-v-33ce4d17><!----><div id="local-search" data-v-33ce4d17><button type="button" class="mini-search mini-search-button" aria-label="搜索文档" data-v-33ce4d17><span class="mini-search-button-container"><svg class="mini-search-search-icon" width="20" height="20" viewBox="0 0 20 20" aria-label="search icon"><path d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z" stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg><span class="mini-search-button-placeholder">搜索文档</span></span><span class="mini-search-button-keys"><kbd class="mini-search-button-key"></kbd><kbd class="mini-search-button-key">K</kbd></span></button></div></div></div><nav aria-labelledby="main-nav-aria-label" class="vp-navbar-menu menu" data-v-f3bacbcd data-v-c9c9ed43><span id="main-nav-aria-label" class="visually-hidden" data-v-c9c9ed43>Main Navigation</span><!--[--><!--[--><a class="vp-link no-icon link navbar-menu-link" href="/" tabindex="0" data-v-c9c9ed43 data-v-d69a1a8f data-v-2871b571><!--[--><!----><span data-v-d69a1a8f>首页</span><!--]--><!----></a><!--]--><!--[--><a class="vp-link no-icon link navbar-menu-link" href="/blog/" tabindex="0" data-v-c9c9ed43 data-v-d69a1a8f data-v-2871b571><!--[--><!----><span data-v-d69a1a8f>博客</span><!--]--><!----></a><!--]--><!--[--><a class="vp-link no-icon link navbar-menu-link" href="/blog/tags/" tabindex="0" data-v-c9c9ed43 data-v-d69a1a8f data-v-2871b571><!--[--><!----><span data-v-d69a1a8f>标签</span><!--]--><!----></a><!--]--><!--[--><a class="vp-link no-icon link navbar-menu-link" href="/blog/archives/" tabindex="0" data-v-c9c9ed43 data-v-d69a1a8f data-v-2871b571><!--[--><!----><span data-v-d69a1a8f>归档</span><!--]--><!----></a><!--]--><!--[--><div class="vp-flyout vp-navbar-menu-group" data-v-c9c9ed43 data-v-d7078d68><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-d7078d68><span class="text" data-v-d7078d68><!----><!----><span data-v-d7078d68>笔记</span><span class="vpi-chevron-down text-icon" data-v-d7078d68></span></span></button><div class="menu" data-v-d7078d68><div class="vp-menu" data-v-d7078d68 data-v-87d0f266><div class="items" data-v-87d0f266><!--[--><!--[--><div class="vp-menu-link" data-v-87d0f266 data-v-328a20d8><a class="vp-link no-icon link" href="/%E8%AF%AD%E8%A8%80/" data-v-328a20d8 data-v-2871b571><!--[--><!----> 语言<!--]--><!----></a></div><!--]--><!--[--><div class="vp-menu-link" data-v-87d0f266 data-v-328a20d8><a class="vp-link no-icon link" href="/%E9%9F%B3%E4%B9%90/" data-v-328a20d8 data-v-2871b571><!--[--><!----> 音乐<!--]--><!----></a></div><!--]--><!--[--><div class="vp-menu-link" data-v-87d0f266 data-v-328a20d8><a class="vp-link no-icon link" href="/%E9%98%85%E8%AF%BB/" data-v-328a20d8 data-v-2871b571><!--[--><!----> 读书<!--]--><!----></a></div><!--]--><!--[--><div class="vp-menu-link" data-v-87d0f266 data-v-328a20d8><a class="vp-link no-icon link" href="/%E7%B3%BB%E7%BB%9F/" data-v-328a20d8 data-v-2871b571><!--[--><!----> 系统<!--]--><!----></a></div><!--]--><!--[--><div class="vp-menu-link" data-v-87d0f266 data-v-328a20d8><a class="vp-link no-icon link" href="/%E8%BD%AF%E4%BB%B6/" data-v-328a20d8 data-v-2871b571><!--[--><!----> 软件<!--]--><!----></a></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--]--></nav><!----><div class="vp-navbar-appearance appearance" data-v-f3bacbcd data-v-9cbad775><button class="vp-switch vp-switch-appearance" type="button" role="switch" title aria-checked="false" data-v-9cbad775 data-v-624ea98a data-v-f086b4db><span class="check" data-v-f086b4db><span class="icon" data-v-f086b4db><!--[--><span class="vpi-sun sun" data-v-624ea98a></span><span class="vpi-moon moon" data-v-624ea98a></span><!--]--></span></span></button></div><div class="vp-social-links vp-navbar-social-links social-links" data-v-f3bacbcd data-v-7e807493 data-v-14c5012f><!--[--><a class="vp-social-link no-icon" href="/" aria-label="github" target="_blank" rel="noopener" data-v-14c5012f data-v-0917d8bb><span class="vpi-social-github" /></a><!--]--></div><div class="vp-flyout vp-navbar-extra extra" data-v-f3bacbcd data-v-a9627d89 data-v-d7078d68><button type="button" class="button" aria-haspopup="true" aria-expanded="false" aria-label="extra navigation" data-v-d7078d68><span class="vpi-more-horizontal icon" data-v-d7078d68></span></button><div class="menu" data-v-d7078d68><div class="vp-menu" data-v-d7078d68 data-v-87d0f266><!----><!--[--><!--[--><!----><div class="group" data-v-a9627d89><div class="item appearance" data-v-a9627d89><p class="label" data-v-a9627d89>外观</p><div class="appearance-action" data-v-a9627d89><button class="vp-switch vp-switch-appearance" type="button" role="switch" title aria-checked="false" data-v-a9627d89 data-v-624ea98a data-v-f086b4db><span class="check" data-v-f086b4db><span class="icon" data-v-f086b4db><!--[--><span class="vpi-sun sun" data-v-624ea98a></span><span class="vpi-moon moon" data-v-624ea98a></span><!--]--></span></span></button></div></div></div><div class="group" data-v-a9627d89><div class="item social-links" data-v-a9627d89><div class="vp-social-links social-links-list" data-v-a9627d89 data-v-14c5012f><!--[--><a class="vp-social-link no-icon" href="/" aria-label="github" target="_blank" rel="noopener" data-v-14c5012f data-v-0917d8bb><span class="vpi-social-github" /></a><!--]--></div></div></div><!--]--><!--]--></div></div></div><!--[--><!--]--><button type="button" class="vp-navbar-hamburger hamburger" aria-label="mobile navigation" aria-expanded="false" aria-controls="nav-screen" data-v-f3bacbcd data-v-bc6eb58f><span class="container" data-v-bc6eb58f><span class="top" data-v-bc6eb58f></span><span class="middle" data-v-bc6eb58f></span><span class="bottom" data-v-bc6eb58f></span></span></button></div></div></div></div><div class="divider" data-v-f3bacbcd><div class="divider-line" data-v-f3bacbcd></div></div></div><!----></header><div class="vp-local-nav reached-top is-blog" data-v-6215af77 data-v-3e4c790c><button class="menu" aria-expanded="false" aria-controls="SidebarNav" data-v-3e4c790c><span class="vpi-align-left menu-icon" data-v-3e4c790c></span><span class="menu-text" data-v-3e4c790c>Menu</span></button><div class="vp-local-nav-outline-dropdown" style="--vp-vh:0px;" data-v-3e4c790c data-v-b4843468><button data-v-b4843468>返回顶部</button><!----></div></div><aside class="vp-sidebar" vp-sidebar data-v-6215af77 data-v-1f04ba97><div class="curtain" data-v-1f04ba97></div><nav id="SidebarNav" class="nav" aria-labelledby="sidebar-aria-label" tabindex="-1" data-v-1f04ba97><span id="sidebar-aria-label" class="visually-hidden" data-v-1f04ba97> Sidebar Navigation </span><!--[--><!--]--><!--[--><div class="no-transition group" data-v-b972e5ec><section class="vp-sidebar-item sidebar-item level-0 collapsible" data-v-b972e5ec data-v-9991fd35><div class="item" role="button" tabindex="0" data-v-9991fd35><div class="indicator" data-v-9991fd35></div><!----><h2 class="text" data-v-9991fd35>写作</h2><div class="caret" role="button" aria-label="toggle section" tabindex="0" data-v-9991fd35><span class="vpi-chevron-right caret-icon" data-v-9991fd35></span></div></div><div class="items" data-v-9991fd35><!--[--><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-9991fd35 data-v-9991fd35><div class="item" data-v-9991fd35><div class="indicator" data-v-9991fd35></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/smxug572/" data-v-9991fd35 data-v-2871b571><!--[--><p class="text" data-v-9991fd35>Markdown</p><!--]--><!----></a><!----></div><!----></div><!--]--></div></section></div><div class="no-transition group" data-v-b972e5ec><section class="vp-sidebar-item sidebar-item level-0 collapsible" data-v-b972e5ec data-v-9991fd35><div class="item" role="button" tabindex="0" data-v-9991fd35><div class="indicator" data-v-9991fd35></div><!----><h2 class="text" data-v-9991fd35>前端</h2><div class="caret" role="button" aria-label="toggle section" tabindex="0" data-v-9991fd35><span class="vpi-chevron-right caret-icon" data-v-9991fd35></span></div></div><div class="items" data-v-9991fd35><!--[--><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-9991fd35 data-v-9991fd35><div class="item" data-v-9991fd35><div class="indicator" data-v-9991fd35></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/vm3ncl9p/" data-v-9991fd35 data-v-2871b571><!--[--><p class="text" data-v-9991fd35>CSS</p><!--]--><!----></a><!----></div><!----></div><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-9991fd35 data-v-9991fd35><div class="item" data-v-9991fd35><div class="indicator" data-v-9991fd35></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/6k7oeg3e/" data-v-9991fd35 data-v-2871b571><!--[--><p class="text" data-v-9991fd35>Emment</p><!--]--><!----></a><!----></div><!----></div><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-9991fd35 data-v-9991fd35><div class="item" data-v-9991fd35><div class="indicator" data-v-9991fd35></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/nohwln5i/" data-v-9991fd35 data-v-2871b571><!--[--><p class="text" data-v-9991fd35>HTML</p><!--]--><!----></a><!----></div><!----></div><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-9991fd35 data-v-9991fd35><div class="item" data-v-9991fd35><div class="indicator" data-v-9991fd35></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/277es0hv/" data-v-9991fd35 data-v-2871b571><!--[--><p class="text" data-v-9991fd35>JavaScript</p><!--]--><!----></a><!----></div><!----></div><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-9991fd35 data-v-9991fd35><div class="item" data-v-9991fd35><div class="indicator" data-v-9991fd35></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/33946322/" data-v-9991fd35 data-v-2871b571><!--[--><p class="text" data-v-9991fd35>jQuery</p><!--]--><!----></a><!----></div><!----></div><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-9991fd35 data-v-9991fd35><div class="item" data-v-9991fd35><div class="indicator" data-v-9991fd35></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/9k2npeo9/" data-v-9991fd35 data-v-2871b571><!--[--><p class="text" data-v-9991fd35>Node.js</p><!--]--><!----></a><!----></div><!----></div><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-9991fd35 data-v-9991fd35><div class="item" data-v-9991fd35><div class="indicator" data-v-9991fd35></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/vue/" data-v-9991fd35 data-v-2871b571><!--[--><p class="text" data-v-9991fd35>vue</p><!--]--><!----></a><!----></div><!----></div><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-9991fd35 data-v-9991fd35><div class="item" data-v-9991fd35><div class="indicator" data-v-9991fd35></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/vku0v8ty/" data-v-9991fd35 data-v-2871b571><!--[--><p class="text" data-v-9991fd35>Webgl</p><!--]--><!----></a><!----></div><!----></div><!--]--></div></section></div><div class="no-transition group" data-v-b972e5ec><section class="vp-sidebar-item sidebar-item level-0 collapsible has-active" data-v-b972e5ec data-v-9991fd35><div class="item" role="button" tabindex="0" data-v-9991fd35><div class="indicator" data-v-9991fd35></div><!----><h2 class="text" data-v-9991fd35>后端</h2><div class="caret" role="button" aria-label="toggle section" tabindex="0" data-v-9991fd35><span class="vpi-chevron-right caret-icon" data-v-9991fd35></span></div></div><div class="items" data-v-9991fd35><!--[--><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-9991fd35 data-v-9991fd35><div class="item" data-v-9991fd35><div class="indicator" data-v-9991fd35></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/arthas/" data-v-9991fd35 data-v-2871b571><!--[--><p class="text" data-v-9991fd35>arthas</p><!--]--><!----></a><!----></div><!----></div><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-9991fd35 data-v-9991fd35><div class="item" data-v-9991fd35><div class="indicator" data-v-9991fd35></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/2gzez6rp/" data-v-9991fd35 data-v-2871b571><!--[--><p class="text" data-v-9991fd35>Docker</p><!--]--><!----></a><!----></div><!----></div><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-9991fd35 data-v-9991fd35><div class="item" data-v-9991fd35><div class="indicator" data-v-9991fd35></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/emiohftn/" data-v-9991fd35 data-v-2871b571><!--[--><p class="text" data-v-9991fd35>Nginx</p><!--]--><!----></a><!----></div><!----></div><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-9991fd35 data-v-9991fd35><div class="item" data-v-9991fd35><div class="indicator" data-v-9991fd35></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/q0ogcwzk/" data-v-9991fd35 data-v-2871b571><!--[--><p class="text" data-v-9991fd35>Python</p><!--]--><!----></a><!----></div><!----></div><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-9991fd35 data-v-9991fd35><div class="item" data-v-9991fd35><div class="indicator" data-v-9991fd35></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/f66uo43m/" data-v-9991fd35 data-v-2871b571><!--[--><p class="text" data-v-9991fd35>Tomcat</p><!--]--><!----></a><!----></div><!----></div><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-9991fd35 data-v-9991fd35><div class="item" data-v-9991fd35><div class="indicator" data-v-9991fd35></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" data-v-9991fd35 data-v-2871b571><!--[--><p class="text" data-v-9991fd35>多线程</p><!--]--><!----></a><!----></div><!----></div><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-9991fd35 data-v-9991fd35><div class="item" data-v-9991fd35><div class="indicator" data-v-9991fd35></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/%E7%AE%97%E6%B3%95/" data-v-9991fd35 data-v-2871b571><!--[--><p class="text" data-v-9991fd35>算法</p><!--]--><!----></a><!----></div><!----></div><!--]--></div></section></div><div class="no-transition group" data-v-b972e5ec><section class="vp-sidebar-item sidebar-item level-0 collapsible" data-v-b972e5ec data-v-9991fd35><div class="item" role="button" tabindex="0" data-v-9991fd35><div class="indicator" data-v-9991fd35></div><!----><h2 class="text" data-v-9991fd35>数据库</h2><div class="caret" role="button" aria-label="toggle section" tabindex="0" data-v-9991fd35><span class="vpi-chevron-right caret-icon" data-v-9991fd35></span></div></div><div class="items" data-v-9991fd35><!--[--><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-9991fd35 data-v-9991fd35><div class="item" data-v-9991fd35><div class="indicator" data-v-9991fd35></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/gb7cg89e/" data-v-9991fd35 data-v-2871b571><!--[--><p class="text" data-v-9991fd35>Mysql</p><!--]--><!----></a><!----></div><!----></div><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-9991fd35 data-v-9991fd35><div class="item" data-v-9991fd35><div class="indicator" data-v-9991fd35></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/wl94mew9/" data-v-9991fd35 data-v-2871b571><!--[--><p class="text" data-v-9991fd35>Oracle</p><!--]--><!----></a><!----></div><!----></div><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-9991fd35 data-v-9991fd35><div class="item" data-v-9991fd35><div class="indicator" data-v-9991fd35></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/whdcojmu/" data-v-9991fd35 data-v-2871b571><!--[--><p class="text" data-v-9991fd35>Redis</p><!--]--><!----></a><!----></div><!----></div><!--]--></div></section></div><!--]--><!--[--><!--]--></nav></aside><!--[--><div id="VPContent" vp-content class="vp-content has-sidebar" data-v-6215af77 data-v-dc51e244><div class="has-sidebar has-aside vp-doc-container" data-v-111ee9d7><!--[--><!--]--><div class="container" data-v-111ee9d7><div class="aside" vp-outline data-v-111ee9d7><div class="aside-curtain" data-v-111ee9d7></div><div class="aside-container" data-v-111ee9d7><div class="aside-content" data-v-111ee9d7><div class="vp-doc-aside" data-v-111ee9d7 data-v-963d54ec><!--[--><!--]--><!--[--><!--]--><nav aria-labelledby="doc-outline-aria-label" class="vp-doc-aside-outline" role="navigation" data-v-963d54ec data-v-1cd0a7b6><div class="content" data-v-1cd0a7b6><div class="outline-marker" data-v-1cd0a7b6></div><div id="doc-outline-aria-label" aria-level="2" class="outline-title" role="heading" data-v-1cd0a7b6><span data-v-1cd0a7b6>此页内容</span><span class="vpi-print icon" data-v-1cd0a7b6></span></div><ul class="root" data-v-1cd0a7b6 data-v-6afbc476><!--[--><!--]--></ul></div></nav><!--[--><!--]--><div class="spacer" data-v-963d54ec></div><!--[--><!--]--></div></div></div></div><div class="content" data-v-111ee9d7><div class="content-container" data-v-111ee9d7><!--[--><!--]--><main class="main" data-v-111ee9d7><nav class="vp-breadcrumb" data-v-111ee9d7 data-v-626e4fc0><ol vocab="https://schema.org/" typeof="BreadcrumbList" data-v-626e4fc0><!--[--><li property="itemListElement" typeof="ListItem" data-v-626e4fc0><a class="vp-link no-icon link breadcrumb" href="/" property="item" typeof="WebPage" data-v-626e4fc0 data-v-2871b571><!--[-->首页<!--]--><!----></a><span class="vpi-chevron-right" data-v-626e4fc0></span><meta property="name" content="首页" data-v-626e4fc0><meta property="position" content="1" data-v-626e4fc0></li><li property="itemListElement" typeof="ListItem" data-v-626e4fc0><span class="vp-link no-icon breadcrumb" href="/" property="item" typeof="WebPage" data-v-626e4fc0 data-v-2871b571><!--[-->后端<!--]--><!----></span><span class="vpi-chevron-right" data-v-626e4fc0></span><meta property="name" content="后端" data-v-626e4fc0><meta property="position" content="2" data-v-626e4fc0></li><li property="itemListElement" typeof="ListItem" data-v-626e4fc0><a class="vp-link no-icon link breadcrumb current" href="/%E8%AF%AD%E8%A8%80/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" property="item" typeof="WebPage" data-v-626e4fc0 data-v-2871b571><!--[-->多线程<!--]--><!----></a><!----><meta property="name" content="多线程" data-v-626e4fc0><meta property="position" content="3" data-v-626e4fc0></li><!--]--></ol></nav><!--[--><h1 class="vp-doc-title page-title" data-v-d84d5bb0>多线程 <!----></h1><div class="vp-doc-meta" data-v-d84d5bb0><p class="reading-time" data-v-d84d5bb0><span class="vpi-books icon" data-v-d84d5bb0></span><span data-v-d84d5bb0>2171字</span><span data-v-d84d5bb0>约7分钟</span></p><!----><p class="create-time" data-v-d84d5bb0><span class="vpi-clock icon" data-v-d84d5bb0></span><span data-v-d84d5bb0>2025-06-20</span></p></div><!--]--><div class="_%E8%AF%AD%E8%A8%80_%E5%A4%9A%E7%BA%BF%E7%A8%8B_ external-link-icon-enabled vp-doc plume-content" vp-content data-v-111ee9d7><div data-v-111ee9d7><h2 id="线程" tabindex="-1"><a class="header-anchor" href="#线程"><span>线程</span></a></h2><h3 id="属性" tabindex="-1"><a class="header-anchor" href="#属性"><span>属性</span></a></h3><div class="vp-code-tabs"><div class="vp-code-tabs-nav" role="tablist"><!--[--><button class="active vp-code-tab-nav" type="button" role="tab" aria-controls="codetab-6-0" aria-selected="true"><!--[--><span>守护</span><!--]--></button><button class="vp-code-tab-nav" type="button" role="tab" aria-controls="codetab-6-1" aria-selected="false"><!--[--><span>优先级</span><!--]--></button><button class="vp-code-tab-nav" type="button" role="tab" aria-controls="codetab-6-2" aria-selected="false"><!--[--><span>等待、通知</span><!--]--></button><button class="vp-code-tab-nav" type="button" role="tab" aria-controls="codetab-6-3" aria-selected="false"><!--[--><span>通知</span><!--]--></button><button class="vp-code-tab-nav" type="button" role="tab" aria-controls="codetab-6-4" aria-selected="false"><!--[--><span>对象锁</span><!--]--></button><!--]--></div><!--[--><div id="codetab-6-0" class="active vp-code-tab" role="tabpanel" aria-expanded="true"><div class="vp-code-tab-title"><!--[--><span>守护</span><!--]--></div><!--[--><div class="language-java line-numbers-mode" data-ext="java" data-title="java"><button class="copy" title="复制代码" data-copied="已复制"></button><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>/**</span></span>
+<span class="line"><span> * 守护线程例子：主线程关闭 -&gt; 子线程关闭</span></span>
+<span class="line"><span> */</span></span>
+<span class="line"><span>public class DaemonDemo {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public static class T1 extends Thread{</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        @Override</span></span>
+<span class="line"><span>        public void run() {</span></span>
+<span class="line"><span>            while (true) {</span></span>
+<span class="line"><span>                System.out.println(&quot;I am alive&quot;);</span></span>
+<span class="line"><span>                try {</span></span>
+<span class="line"><span>                    Thread.sleep(1000);</span></span>
+<span class="line"><span>                } catch (InterruptedException e) {</span></span>
+<span class="line"><span>                    e.printStackTrace();</span></span>
+<span class="line"><span>                }</span></span>
+<span class="line"><span>            }</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public static void main(String[] args) throws InterruptedException {</span></span>
+<span class="line"><span>        Thread thread = new T1();</span></span>
+<span class="line"><span>        thread.setDaemon(true);</span></span>
+<span class="line"><span>        thread.start();</span></span>
+<span class="line"><span>        Thread.sleep(5000);</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><!--]--></div><div id="codetab-6-1" class="vp-code-tab" role="tabpanel" aria-expanded="false"><div class="vp-code-tab-title"><!--[--><span>优先级</span><!--]--></div><!--[--><div class="language-java line-numbers-mode" data-ext="java" data-title="java"><button class="copy" title="复制代码" data-copied="已复制"></button><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>/**</span></span>
+<span class="line"><span> * 线程优先权：优先级大先执行</span></span>
+<span class="line"><span> */</span></span>
+<span class="line"><span>public class PriorityDemo {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public static class HightPriority extends Thread {</span></span>
+<span class="line"><span>        static int count = 0;</span></span>
+<span class="line"><span>        @Override</span></span>
+<span class="line"><span>        public void run() {</span></span>
+<span class="line"><span>            while (true) {</span></span>
+<span class="line"><span>                synchronized (PriorityDemo.class) {</span></span>
+<span class="line"><span>                    count ++;</span></span>
+<span class="line"><span>                    if (count &gt; 1000000) {</span></span>
+<span class="line"><span>                        System.out.println(&quot;HightPriority is complete&quot;);</span></span>
+<span class="line"><span>                        break;</span></span>
+<span class="line"><span>                    }</span></span>
+<span class="line"><span>                }</span></span>
+<span class="line"><span>            }</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public static class LowPriority extends Thread {</span></span>
+<span class="line"><span>        static int count = 0;</span></span>
+<span class="line"><span>        @Override</span></span>
+<span class="line"><span>        public void run() {</span></span>
+<span class="line"><span>            while (true) {</span></span>
+<span class="line"><span>                synchronized (PriorityDemo.class) {</span></span>
+<span class="line"><span>                    count ++;</span></span>
+<span class="line"><span>                    if (count &gt; 1000000) {</span></span>
+<span class="line"><span>                        System.out.println(&quot;LowPriority is complete&quot;);</span></span>
+<span class="line"><span>                        break;</span></span>
+<span class="line"><span>                    }</span></span>
+<span class="line"><span>                }</span></span>
+<span class="line"><span>            }</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public static void main(String[] args) {</span></span>
+<span class="line"><span>        Thread high = new HightPriority();</span></span>
+<span class="line"><span>        Thread low = new LowPriority();</span></span>
+<span class="line"><span>        high.setPriority(Thread.MAX_PRIORITY);</span></span>
+<span class="line"><span>        low.setPriority(Thread.MIN_PRIORITY);</span></span>
+<span class="line"><span>        low.start();</span></span>
+<span class="line"><span>        high.start();</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><!--]--></div><div id="codetab-6-2" class="vp-code-tab" role="tabpanel" aria-expanded="false"><div class="vp-code-tab-title"><!--[--><span>等待、通知</span><!--]--></div><!--[--><div class="language-java line-numbers-mode" data-ext="java" data-title="java"><button class="copy" title="复制代码" data-copied="已复制"></button><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>/**</span></span>
+<span class="line"><span> * 等待线程：主线程等待子线程执行完再执行</span></span>
+<span class="line"><span> */</span></span>
+<span class="line"><span>public class JoinDemo {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public volatile static int i = 0;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public static class T1 extends Thread {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        public void run() {</span></span>
+<span class="line"><span>            while (i &lt; 10000) {</span></span>
+<span class="line"><span>                i++;</span></span>
+<span class="line"><span>            }</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public static void main(String[] args) throws InterruptedException {</span></span>
+<span class="line"><span>        Thread thread = new T1();</span></span>
+<span class="line"><span>        thread.start();</span></span>
+<span class="line"><span>        thread.join();</span></span>
+<span class="line"><span>        System.out.println(i);</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><!--]--></div><div id="codetab-6-3" class="vp-code-tab" role="tabpanel" aria-expanded="false"><div class="vp-code-tab-title"><!--[--><span>通知</span><!--]--></div><!--[--><div class="language-java line-numbers-mode" data-ext="java" data-title="java"><button class="copy" title="复制代码" data-copied="已复制"></button><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>/**</span></span>
+<span class="line"><span> * 线程等待、通知</span></span>
+<span class="line"><span> * 适用情况：一个线程中有一个子任务，子任务执行结束再继续</span></span>
+<span class="line"><span> */</span></span>
+<span class="line"><span>public class WNDemo {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    final static Object object = new Object();</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public static class T1 extends Thread {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        public void run() {</span></span>
+<span class="line"><span>            synchronized (object) {</span></span>
+<span class="line"><span>                System.out.println(&quot;T1 start &quot; + System.currentTimeMillis());</span></span>
+<span class="line"><span>                try {</span></span>
+<span class="line"><span>                    object.wait();</span></span>
+<span class="line"><span>                } catch (InterruptedException e) {</span></span>
+<span class="line"><span>                    e.printStackTrace();</span></span>
+<span class="line"><span>                }</span></span>
+<span class="line"><span>                System.out.println(&quot;T1 end &quot; + System.currentTimeMillis());</span></span>
+<span class="line"><span>            }</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public static class T2 extends Thread {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        public void run() {</span></span>
+<span class="line"><span>            synchronized (object) {</span></span>
+<span class="line"><span>                System.out.println(&quot;T2 start &quot; + System.currentTimeMillis());</span></span>
+<span class="line"><span>                object.notify();</span></span>
+<span class="line"><span>                System.out.println(&quot;T2 end &quot; + System.currentTimeMillis());</span></span>
+<span class="line"><span>                try {</span></span>
+<span class="line"><span>                    Thread.sleep(2000);</span></span>
+<span class="line"><span>                } catch (InterruptedException e) {</span></span>
+<span class="line"><span>                    e.printStackTrace();</span></span>
+<span class="line"><span>                }</span></span>
+<span class="line"><span>            }</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public static void main(String[] args) {</span></span>
+<span class="line"><span>        Thread t1 = new T1();</span></span>
+<span class="line"><span>        Thread t2 = new T2();</span></span>
+<span class="line"><span>        t1.start();</span></span>
+<span class="line"><span>        t2.start();</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><!--]--></div><div id="codetab-6-4" class="vp-code-tab" role="tabpanel" aria-expanded="false"><div class="vp-code-tab-title"><!--[--><span>对象锁</span><!--]--></div><!--[--><div class="language-java line-numbers-mode" data-ext="java" data-title="java"><button class="copy" title="复制代码" data-copied="已复制"></button><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>/**</span></span>
+<span class="line"><span> * 线程执行方法同步（对象锁）：不同线程执行同一代码段不并行</span></span>
+<span class="line"><span> */</span></span>
+<span class="line"><span>public class SyncDemo implements Runnable {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    static SyncDemo syncDemo = new SyncDemo();</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    static int i = 0;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public synchronized void  increase() {</span></span>
+<span class="line"><span>        i++;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @Override</span></span>
+<span class="line"><span>    public void run() {</span></span>
+<span class="line"><span>        for (int j = 0; j &lt; 10000; j++) {</span></span>
+<span class="line"><span>            increase();</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public static void main(String[] args) throws InterruptedException {</span></span>
+<span class="line"><span>        Thread t1 = new Thread(syncDemo);</span></span>
+<span class="line"><span>        Thread t2 = new Thread(syncDemo);</span></span>
+<span class="line"><span>        t1.start(); t2.start();</span></span>
+<span class="line"><span>        t1.join(); t2.join();</span></span>
+<span class="line"><span>        System.out.println(i);</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><!--]--></div><!--]--></div><h3 id="创建" tabindex="-1"><a class="header-anchor" href="#创建"><span>创建</span></a></h3><div class="vp-code-tabs"><div class="vp-code-tabs-nav" role="tablist"><!--[--><button class="active vp-code-tab-nav" type="button" role="tab" aria-controls="codetab-26-0" aria-selected="true"><!--[--><span>方式1</span><!--]--></button><button class="vp-code-tab-nav" type="button" role="tab" aria-controls="codetab-26-1" aria-selected="false"><!--[--><span>方式2</span><!--]--></button><button class="vp-code-tab-nav" type="button" role="tab" aria-controls="codetab-26-2" aria-selected="false"><!--[--><span>方式3</span><!--]--></button><button class="vp-code-tab-nav" type="button" role="tab" aria-controls="codetab-26-3" aria-selected="false"><!--[--><span>方式4</span><!--]--></button><button class="vp-code-tab-nav" type="button" role="tab" aria-controls="codetab-26-4" aria-selected="false"><!--[--><span>方式5</span><!--]--></button><!--]--></div><!--[--><div id="codetab-26-0" class="active vp-code-tab" role="tabpanel" aria-expanded="true"><div class="vp-code-tab-title"><!--[--><span>方式1</span><!--]--></div><!--[--><div class="language-java line-numbers-mode" data-ext="java" data-title="java"><button class="copy" title="复制代码" data-copied="已复制"></button><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>/**</span></span>
+<span class="line"><span> * 创建线程</span></span>
+<span class="line"><span> * 方式：继承 Thread</span></span>
+<span class="line"><span> */</span></span>
+<span class="line"><span>public class CreateThread1 extends Thread {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @Override</span></span>
+<span class="line"><span>    public void run() {</span></span>
+<span class="line"><span>        super.run();</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public static void main(String[] args) {</span></span>
+<span class="line"><span>        Thread thread = new CreateThread1();</span></span>
+<span class="line"><span>        thread.start();</span></span>
+<span class="line"><span>        Thread.yield(); // 让出CPU</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><!--]--></div><div id="codetab-26-1" class="vp-code-tab" role="tabpanel" aria-expanded="false"><div class="vp-code-tab-title"><!--[--><span>方式2</span><!--]--></div><!--[--><div class="language-java line-numbers-mode" data-ext="java" data-title="java"><button class="copy" title="复制代码" data-copied="已复制"></button><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>/**</span></span>
+<span class="line"><span> * 创建线程</span></span>
+<span class="line"><span> * 方式：实现 Runnable</span></span>
+<span class="line"><span> */</span></span>
+<span class="line"><span>public class CreateThread2 implements Runnable {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @Override</span></span>
+<span class="line"><span>    public void run() {</span></span>
+<span class="line"><span>        System.out.println(&quot;开始运行这个线程&quot;);</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public static void main(String[] args) {</span></span>
+<span class="line"><span>        Thread thread = new Thread();</span></span>
+<span class="line"><span>        thread.start();</span></span>
+<span class="line"><span>        Thread.yield(); // 让出CPU</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><!--]--></div><div id="codetab-26-2" class="vp-code-tab" role="tabpanel" aria-expanded="false"><div class="vp-code-tab-title"><!--[--><span>方式3</span><!--]--></div><!--[--><div class="language-java line-numbers-mode" data-ext="java" data-title="java"><button class="copy" title="复制代码" data-copied="已复制"></button><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>/**</span></span>
+<span class="line"><span> * 创建线程</span></span>
+<span class="line"><span> * 方式：CompletableFuture 创建</span></span>
+<span class="line"><span> */</span></span>
+<span class="line"><span>public class CreateThread3 {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public void exec() throws ExecutionException, InterruptedException {</span></span>
+<span class="line"><span>        CompletableFuture completableFuture1 = CompletableFuture</span></span>
+<span class="line"><span>                .runAsync(() -&gt; {</span></span>
+<span class="line"><span>                    System.out.println(&quot;方法1 开始&quot;);</span></span>
+<span class="line"><span>                    try {</span></span>
+<span class="line"><span>                        Thread.sleep(1000);</span></span>
+<span class="line"><span>                    } catch (InterruptedException e) {</span></span>
+<span class="line"><span>                        e.printStackTrace();</span></span>
+<span class="line"><span>                    }</span></span>
+<span class="line"><span>                    System.out.println(&quot;方法1 执行&quot;);</span></span>
+<span class="line"><span>                });</span></span>
+<span class="line"><span>        CompletableFuture completableFuture2 = CompletableFuture</span></span>
+<span class="line"><span>                .runAsync(() -&gt; {</span></span>
+<span class="line"><span>                    System.out.println(&quot;方法2 开始&quot;);</span></span>
+<span class="line"><span>                    try {</span></span>
+<span class="line"><span>                        Thread.sleep(3000);</span></span>
+<span class="line"><span>                    } catch (InterruptedException e) {</span></span>
+<span class="line"><span>                        e.printStackTrace();</span></span>
+<span class="line"><span>                    }</span></span>
+<span class="line"><span>                    System.out.println(&quot;方法2 执行&quot;);</span></span>
+<span class="line"><span>                });</span></span>
+<span class="line"><span>        CompletableFuture completableFuture3 = CompletableFuture</span></span>
+<span class="line"><span>                .runAsync(() -&gt; {</span></span>
+<span class="line"><span>                    System.out.println(&quot;方法3 开始&quot;);</span></span>
+<span class="line"><span>                    try {</span></span>
+<span class="line"><span>                        Thread.sleep(2000);</span></span>
+<span class="line"><span>                    } catch (InterruptedException e) {</span></span>
+<span class="line"><span>                        e.printStackTrace();</span></span>
+<span class="line"><span>                    }</span></span>
+<span class="line"><span>                    System.out.println(&quot;方法3 执行&quot;);</span></span>
+<span class="line"><span>                });</span></span>
+<span class="line"><span>        List&lt;CompletableFuture&gt; completableFutureList = new ArrayList&lt;CompletableFuture&gt;();</span></span>
+<span class="line"><span>        completableFutureList.add(completableFuture1);</span></span>
+<span class="line"><span>        completableFutureList.add(completableFuture2);</span></span>
+<span class="line"><span>        completableFutureList.add(completableFuture3);</span></span>
+<span class="line"><span>        for (CompletableFuture completableFuture : completableFutureList) {</span></span>
+<span class="line"><span>            completableFuture.get();</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @Test</span></span>
+<span class="line"><span>    public void test() {</span></span>
+<span class="line"><span>        try {</span></span>
+<span class="line"><span>            exec();</span></span>
+<span class="line"><span>        } catch (Exception e) {</span></span>
+<span class="line"><span>            e.printStackTrace();</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><!--]--></div><div id="codetab-26-3" class="vp-code-tab" role="tabpanel" aria-expanded="false"><div class="vp-code-tab-title"><!--[--><span>方式4</span><!--]--></div><!--[--><div class="language-java line-numbers-mode" data-ext="java" data-title="java"><button class="copy" title="复制代码" data-copied="已复制"></button><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>/**</span></span>
+<span class="line"><span> * 创建线程</span></span>
+<span class="line"><span> * 方式：通过FutureTask、Callable 创建</span></span>
+<span class="line"><span> * 说明：</span></span>
+<span class="line"><span> * (1)创建Callable接口的实现类，并重写call()方法,该call()方法作为线程的执行体，且有返回值</span></span>
+<span class="line"><span> * (2)创建了Callable接口的实现类的实例，并用FutureTask()方法包装对象，该FutureTask()对象实现了将对象的返回值包装的功能</span></span>
+<span class="line"><span> * (3)使用FutureTask对象将Thread对象的target，创建并启动线程</span></span>
+<span class="line"><span> * (4)调用FutureTask对象的get()方法获得子线程执行结束后的返回值</span></span>
+<span class="line"><span> */</span></span>
+<span class="line"><span>public class CreateThread4 implements Callable&lt;Integer&gt; {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @Override</span></span>
+<span class="line"><span>    public Integer call() throws Exception {   // 重写Callable接口中的call()方法</span></span>
+<span class="line"><span>        int i = 0;</span></span>
+<span class="line"><span>        for (; i &lt; 100; i++) {</span></span>
+<span class="line"><span>            System.out.println(Thread.currentThread().getName() + &quot; &quot; + i);</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>        return i;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public static void main(String[] args) throws InterruptedException, ExecutionException {</span></span>
+<span class="line"><span>        // 创建Callable的对象</span></span>
+<span class="line"><span>        CreateThread4 thread4 = new CreateThread4();</span></span>
+<span class="line"><span>        FutureTask&lt;Integer&gt; ft = new FutureTask&lt;Integer&gt;(thread4);</span></span>
+<span class="line"><span>        for (int i = 0; i &lt; 100; i++) {</span></span>
+<span class="line"><span>            // 返回值主线程的名称和执行代号</span></span>
+<span class="line"><span>            System.out.println(Thread.currentThread().getName() + &quot; &quot; + i);</span></span>
+<span class="line"><span>            if (i == 20) {</span></span>
+<span class="line"><span>                new Thread(ft, &quot;Callable线程&quot;).start();</span></span>
+<span class="line"><span>            }</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>        try {</span></span>
+<span class="line"><span>            System.out.println(&quot;子线程的返回值&quot; + ft.get());</span></span>
+<span class="line"><span>        } catch (Exception e) {</span></span>
+<span class="line"><span>            e.printStackTrace();</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><!--]--></div><div id="codetab-26-4" class="vp-code-tab" role="tabpanel" aria-expanded="false"><div class="vp-code-tab-title"><!--[--><span>方式5</span><!--]--></div><!--[--><div class="language-java line-numbers-mode" data-ext="java" data-title="java"><button class="copy" title="复制代码" data-copied="已复制"></button><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>/**</span></span>
+<span class="line"><span> * 创建线程</span></span>
+<span class="line"><span> * 方式：线程组</span></span>
+<span class="line"><span> */</span></span>
+<span class="line"><span>public class CreateThread5 implements Runnable {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @Override</span></span>
+<span class="line"><span>    public void run() {</span></span>
+<span class="line"><span>        String groupName = Thread.currentThread().getThreadGroup().getName();</span></span>
+<span class="line"><span>        String name = Thread.currentThread().getName();</span></span>
+<span class="line"><span>        while (true) {</span></span>
+<span class="line"><span>            System.out.println(&quot;I am &quot; + groupName + &quot; &quot; + name);</span></span>
+<span class="line"><span>            try {</span></span>
+<span class="line"><span>                Thread.sleep(2000);</span></span>
+<span class="line"><span>            } catch (InterruptedException e) {</span></span>
+<span class="line"><span>                e.printStackTrace();</span></span>
+<span class="line"><span>            }</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public static void main(String[] args) {</span></span>
+<span class="line"><span>        ThreadGroup threadGroup = new ThreadGroup(&quot;ThreadGroup1&quot;);</span></span>
+<span class="line"><span>        Thread thread1 = new Thread(threadGroup, new CreateThread5(), &quot;thread1&quot;);</span></span>
+<span class="line"><span>        Thread thread2 = new Thread(threadGroup, new CreateThread5(), &quot;thread2&quot;);</span></span>
+<span class="line"><span>        thread1.start();</span></span>
+<span class="line"><span>        thread2.start();</span></span>
+<span class="line"><span>        System.out.println(threadGroup.activeCount());</span></span>
+<span class="line"><span>        threadGroup.list();</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><!--]--></div><!--]--></div><h3 id="分组" tabindex="-1"><a class="header-anchor" href="#分组"><span>分组</span></a></h3><div class="vp-code-tabs"><div class="vp-code-tabs-nav" role="tablist"><!--[--><button class="active vp-code-tab-nav" type="button" role="tab" aria-controls="codetab-46-0" aria-selected="true"><!--[--><span>线程组</span><!--]--></button><!--]--></div><!--[--><div id="codetab-46-0" class="active vp-code-tab" role="tabpanel" aria-expanded="true"><div class="vp-code-tab-title"><!--[--><span>线程组</span><!--]--></div><!--[--><div class="language-java line-numbers-mode" data-ext="java" data-title="java"><button class="copy" title="复制代码" data-copied="已复制"></button><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>/**</span></span>
+<span class="line"><span> * 线程组</span></span>
+<span class="line"><span> */</span></span>
+<span class="line"><span>public class ThreadGroupName implements Runnable {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @Override</span></span>
+<span class="line"><span>    public void run() {</span></span>
+<span class="line"><span>        String groupName = Thread.currentThread().getThreadGroup().getName();</span></span>
+<span class="line"><span>        String name = Thread.currentThread().getName();</span></span>
+<span class="line"><span>        while (true) {</span></span>
+<span class="line"><span>            System.out.println(&quot;I am &quot; + groupName + &quot; &quot; + name);</span></span>
+<span class="line"><span>            try {</span></span>
+<span class="line"><span>                Thread.sleep(2000);</span></span>
+<span class="line"><span>            } catch (InterruptedException e) {</span></span>
+<span class="line"><span>                e.printStackTrace();</span></span>
+<span class="line"><span>            }</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public static void main(String[] args) {</span></span>
+<span class="line"><span>        ThreadGroup threadGroup = new ThreadGroup(&quot;ThreadGroup1&quot;);</span></span>
+<span class="line"><span>        Thread thread1 = new Thread(threadGroup, new ThreadGroupName(), &quot;thread1&quot;);</span></span>
+<span class="line"><span>        Thread thread2 = new Thread(threadGroup, new ThreadGroupName(), &quot;thread2&quot;);</span></span>
+<span class="line"><span>        thread1.start();</span></span>
+<span class="line"><span>        thread2.start();</span></span>
+<span class="line"><span>        System.out.println(threadGroup.activeCount());</span></span>
+<span class="line"><span>        threadGroup.list();</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><!--]--></div><!--]--></div><h3 id="方法" tabindex="-1"><a class="header-anchor" href="#方法"><span>方法</span></a></h3><div class="vp-code-tabs"><div class="vp-code-tabs-nav" role="tablist"><!--[--><button class="active vp-code-tab-nav" type="button" role="tab" aria-controls="codetab-54-0" aria-selected="true"><!--[--><span>中断线程</span><!--]--></button><!--]--></div><!--[--><div id="codetab-54-0" class="active vp-code-tab" role="tabpanel" aria-expanded="true"><div class="vp-code-tab-title"><!--[--><span>中断线程</span><!--]--></div><!--[--><div class="language-java line-numbers-mode" data-ext="java" data-title="java"><button class="copy" title="复制代码" data-copied="已复制"></button><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>/**</span></span>
+<span class="line"><span> * 中断线程</span></span>
+<span class="line"><span> */</span></span>
+<span class="line"><span>public class InterruptedThread implements Runnable {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @Override</span></span>
+<span class="line"><span>    public void run() {</span></span>
+<span class="line"><span>        while (true) {</span></span>
+<span class="line"><span>            if (Thread.currentThread().isInterrupted()) {</span></span>
+<span class="line"><span>                System.out.println(&quot;Interrupted&quot;);</span></span>
+<span class="line"><span>                break;</span></span>
+<span class="line"><span>            }</span></span>
+<span class="line"><span>            try {</span></span>
+<span class="line"><span>                Thread.sleep(2000);</span></span>
+<span class="line"><span>            } catch (Exception e) {</span></span>
+<span class="line"><span>                System.out.println(&quot;Error When sleep&quot;);</span></span>
+<span class="line"><span>                Thread.currentThread().interrupt();</span></span>
+<span class="line"><span>            }</span></span>
+<span class="line"><span>            Thread.yield();</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public static void main(String[] args) throws InterruptedException {</span></span>
+<span class="line"><span>        Thread thread = new Thread(new InterruptedThread());</span></span>
+<span class="line"><span>        thread.start();</span></span>
+<span class="line"><span>        Thread.sleep(2000);</span></span>
+<span class="line"><span>        thread.interrupt(); // 中断</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><!--]--></div><!--]--></div><h3 id="问题" tabindex="-1"><a class="header-anchor" href="#问题"><span>问题</span></a></h3><div class="vp-code-tabs"><div class="vp-code-tabs-nav" role="tablist"><!--[--><button class="active vp-code-tab-nav" type="button" role="tab" aria-controls="codetab-62-0" aria-selected="true"><!--[--><span>HashMap多线程问题</span><!--]--></button><button class="vp-code-tab-nav" type="button" role="tab" aria-controls="codetab-62-1" aria-selected="false"><!--[--><span>ArrayList多线程问题</span><!--]--></button><!--]--></div><!--[--><div id="codetab-62-0" class="active vp-code-tab" role="tabpanel" aria-expanded="true"><div class="vp-code-tab-title"><!--[--><span>HashMap多线程问题</span><!--]--></div><!--[--><div class="language-java line-numbers-mode" data-ext="java" data-title="java"><button class="copy" title="复制代码" data-copied="已复制"></button><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>public class HashMapProblem implements Callable&lt;Integer&gt; {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private static ExecutorService exec = Executors.newFixedThreadPool(10);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private static Map&lt;Integer, Integer&gt; results = new HashMap&lt;Integer, Integer&gt;();</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @Override</span></span>
+<span class="line"><span>    public Integer call() throws Exception {</span></span>
+<span class="line"><span>        for (int i = 0; i &lt; 1000; i++) {</span></span>
+<span class="line"><span>            results.put(i, i);</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>        /*</span></span>
+<span class="line"><span>        Thread.sleep(100);</span></span>
+<span class="line"><span>        for (int i = 0; i &lt; 1000; i++) {</span></span>
+<span class="line"><span>            results.remove(i);</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>        */</span></span>
+<span class="line"><span>        System.out.println(&quot; ---- &quot; + Thread.currentThread().getName() + &quot;		&quot; + results.size());</span></span>
+<span class="line"><span>        return results.get(1);</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public static void main(String[] args) throws InterruptedException {</span></span>
+<span class="line"><span>        Stopwatch stopwatch = new Stopwatch();</span></span>
+<span class="line"><span>        for (int i = 0; i &lt; 200; i++) {</span></span>
+<span class="line"><span>            HashMapProblem hashMapProblem = new HashMapProblem();</span></span>
+<span class="line"><span>            exec.submit(hashMapProblem);</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>        exec.shutdown();</span></span>
+<span class="line"><span>        while(true){</span></span>
+<span class="line"><span>            if(exec.isTerminated()){</span></span>
+<span class="line"><span>                System.out.println(&quot;所有的子线程都结束了！&quot;);</span></span>
+<span class="line"><span>                break;</span></span>
+<span class="line"><span>            }</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>        System.out.println(stopwatch.elapsedTime());</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><!--]--></div><div id="codetab-62-1" class="vp-code-tab" role="tabpanel" aria-expanded="false"><div class="vp-code-tab-title"><!--[--><span>ArrayList多线程问题</span><!--]--></div><!--[--><div class="language-java line-numbers-mode" data-ext="java" data-title="java"><button class="copy" title="复制代码" data-copied="已复制"></button><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>/**</span></span>
+<span class="line"><span> * ArrayList多线程问题</span></span>
+<span class="line"><span> */</span></span>
+<span class="line"><span>public class ArrayListMultiThread {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    static ArrayList&lt;Integer&gt; arrayList = new ArrayList&lt;Integer&gt;(10); // 线程不安全</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    static Vector&lt;Integer&gt; vector = new Vector&lt;Integer&gt;(10); // 线程安全</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public static class AddThread implements Runnable {</span></span>
+<span class="line"><span>        @Override</span></span>
+<span class="line"><span>        public void run() {</span></span>
+<span class="line"><span>            for (int i = 0; i &lt; 1000000; i++) {</span></span>
+<span class="line"><span>                vector.add(i);</span></span>
+<span class="line"><span>            }</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public static void main(String[] args) throws InterruptedException {</span></span>
+<span class="line"><span>        Thread t1 = new Thread(new AddThread());</span></span>
+<span class="line"><span>        Thread t2 = new Thread(new AddThread());</span></span>
+<span class="line"><span>        t1.start();</span></span>
+<span class="line"><span>        t2.start();</span></span>
+<span class="line"><span>        t1.join();</span></span>
+<span class="line"><span>        t2.join();</span></span>
+<span class="line"><span>        System.out.println(vector.size());</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><!--]--></div><!--]--></div><h2 id="锁" tabindex="-1"><a class="header-anchor" href="#锁"><span>锁</span></a></h2><div class="vp-code-tabs"><div class="vp-code-tabs-nav" role="tablist"><!--[--><button class="active vp-code-tab-nav" type="button" role="tab" aria-controls="codetab-73-0" aria-selected="true"><!--[--><span>重入锁</span><!--]--></button><button class="vp-code-tab-nav" type="button" role="tab" aria-controls="codetab-73-1" aria-selected="false"><!--[--><span>重入锁条件</span><!--]--></button><button class="vp-code-tab-nav" type="button" role="tab" aria-controls="codetab-73-2" aria-selected="false"><!--[--><span>信号量</span><!--]--></button><button class="vp-code-tab-nav" type="button" role="tab" aria-controls="codetab-73-3" aria-selected="false"><!--[--><span>读写锁</span><!--]--></button><button class="vp-code-tab-nav" type="button" role="tab" aria-controls="codetab-73-4" aria-selected="false"><!--[--><span>倒计时器（线程池执行完成指定线程后执行）</span><!--]--></button><button class="vp-code-tab-nav" type="button" role="tab" aria-controls="codetab-73-5" aria-selected="false"><!--[--><span>循环栏珊</span><!--]--></button><button class="vp-code-tab-nav" type="button" role="tab" aria-controls="codetab-73-6" aria-selected="false"><!--[--><span>线程阻塞</span><!--]--></button><!--]--></div><!--[--><div id="codetab-73-0" class="active vp-code-tab" role="tabpanel" aria-expanded="true"><div class="vp-code-tab-title"><!--[--><span>重入锁</span><!--]--></div><!--[--><div class="language-java line-numbers-mode" data-ext="java" data-title="java"><button class="copy" title="复制代码" data-copied="已复制"></button><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>/**</span></span>
+<span class="line"><span> * 重入锁（显性的 synchronized）：代码段线程安全</span></span>
+<span class="line"><span> */</span></span>
+<span class="line"><span>public class ReenterLock implements Runnable{</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public static ReentrantLock lock = new ReentrantLock(true);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public static int i = 0;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @Override</span></span>
+<span class="line"><span>    public void run() {</span></span>
+<span class="line"><span>        for (int j = 0; j &lt; 100; j++) {</span></span>
+<span class="line"><span>            lock.lock();</span></span>
+<span class="line"><span>            try {</span></span>
+<span class="line"><span>                i++;</span></span>
+<span class="line"><span>            } finally {</span></span>
+<span class="line"><span>                lock.unlock();</span></span>
+<span class="line"><span>            }</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public static void main(String[] args) throws InterruptedException {</span></span>
+<span class="line"><span>        ReenterLock reenterLock = new ReenterLock();</span></span>
+<span class="line"><span>        Thread t1 = new Thread(reenterLock);</span></span>
+<span class="line"><span>        Thread t2 = new Thread(reenterLock);</span></span>
+<span class="line"><span>        t1.start(); t2.start();</span></span>
+<span class="line"><span>        t1.join(); t2.join();</span></span>
+<span class="line"><span>        System.out.println(i);</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><!--]--></div><div id="codetab-73-1" class="vp-code-tab" role="tabpanel" aria-expanded="false"><div class="vp-code-tab-title"><!--[--><span>重入锁条件</span><!--]--></div><!--[--><div class="language-java line-numbers-mode" data-ext="java" data-title="java"><button class="copy" title="复制代码" data-copied="已复制"></button><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>/**</span></span>
+<span class="line"><span> * 重入锁条件：暂停、唤醒</span></span>
+<span class="line"><span> */</span></span>
+<span class="line"><span>public class ReenterLockCondition implements Runnable {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public static ReentrantLock lock = new ReentrantLock();</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public static Condition condition = lock.newCondition();</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @Override</span></span>
+<span class="line"><span>    public void run() {</span></span>
+<span class="line"><span>        try {</span></span>
+<span class="line"><span>            lock.lock();</span></span>
+<span class="line"><span>            System.out.println(&quot;Thread is wait&quot;);</span></span>
+<span class="line"><span>            condition.await();</span></span>
+<span class="line"><span>            System.out.println(&quot;Thread is going on&quot;);</span></span>
+<span class="line"><span>        } catch (InterruptedException e) {</span></span>
+<span class="line"><span>            e.printStackTrace();</span></span>
+<span class="line"><span>        } finally {</span></span>
+<span class="line"><span>            lock.unlock();</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public static void main(String[] args) throws InterruptedException {</span></span>
+<span class="line"><span>        ReenterLockCondition reenterLockCondition = new ReenterLockCondition();</span></span>
+<span class="line"><span>        Thread t1 = new Thread(reenterLockCondition);</span></span>
+<span class="line"><span>        t1.start();</span></span>
+<span class="line"><span>        Thread.sleep(2000);</span></span>
+<span class="line"><span>        lock.lock();</span></span>
+<span class="line"><span>        System.out.println(&quot;Thread is notify&quot;);</span></span>
+<span class="line"><span>        condition.signal();</span></span>
+<span class="line"><span>        lock.unlock();</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><!--]--></div><div id="codetab-73-2" class="vp-code-tab" role="tabpanel" aria-expanded="false"><div class="vp-code-tab-title"><!--[--><span>信号量</span><!--]--></div><!--[--><div class="language-java line-numbers-mode" data-ext="java" data-title="java"><button class="copy" title="复制代码" data-copied="已复制"></button><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>/**</span></span>
+<span class="line"><span> * 信号量：线程池中每次执行的线程数</span></span>
+<span class="line"><span> */</span></span>
+<span class="line"><span>public class SemapDemo implements Runnable {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    final Semaphore semaphore = new Semaphore(5); // 信号量</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @Override</span></span>
+<span class="line"><span>    public void run() {</span></span>
+<span class="line"><span>        try {</span></span>
+<span class="line"><span>            semaphore.acquire();</span></span>
+<span class="line"><span>            Thread.sleep(2000);</span></span>
+<span class="line"><span>            System.out.println(Thread.currentThread().getId() + &quot;:done!&quot;);</span></span>
+<span class="line"><span>            semaphore.release();</span></span>
+<span class="line"><span>        } catch (InterruptedException e) {</span></span>
+<span class="line"><span>            e.printStackTrace();</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public static void main(String[] args) {</span></span>
+<span class="line"><span>        ExecutorService executorService = Executors.newFixedThreadPool(20); // 创建线程池</span></span>
+<span class="line"><span>        final SemapDemo demo = new SemapDemo();</span></span>
+<span class="line"><span>        for (int i = 0; i &lt; 20; i++) {</span></span>
+<span class="line"><span>            executorService.submit(demo); // 每次创建的信号量</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><!--]--></div><div id="codetab-73-3" class="vp-code-tab" role="tabpanel" aria-expanded="false"><div class="vp-code-tab-title"><!--[--><span>读写锁</span><!--]--></div><!--[--><div class="language-java line-numbers-mode" data-ext="java" data-title="java"><button class="copy" title="复制代码" data-copied="已复制"></button><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>/**</span></span>
+<span class="line"><span> * 读写锁：读并行、写不并行，提升效率</span></span>
+<span class="line"><span> */</span></span>
+<span class="line"><span>public class ReadWriteLockDemo {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private static Lock lock = new ReentrantLock();</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private static ReentrantReadWriteLock readWriteLock = new ReentrantReadWriteLock();</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private static Lock readLock = readWriteLock.readLock();</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private static Lock writeLock = readWriteLock.writeLock();</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private int value;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private static Stopwatch stopwatch = new Stopwatch();</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public Object handleRead(Lock lock) {</span></span>
+<span class="line"><span>        try {</span></span>
+<span class="line"><span>            lock.lock();</span></span>
+<span class="line"><span>            Thread.sleep(1000);</span></span>
+<span class="line"><span>            System.out.println(&quot;读执行时长：&quot; + stopwatch.elapseTime());</span></span>
+<span class="line"><span>        } catch (InterruptedException e) {</span></span>
+<span class="line"><span>            e.printStackTrace();</span></span>
+<span class="line"><span>        } finally {</span></span>
+<span class="line"><span>            lock.unlock();</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>        return value;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public void handleWrite(Lock lock, int index) {</span></span>
+<span class="line"><span>        try {</span></span>
+<span class="line"><span>            lock.lock();</span></span>
+<span class="line"><span>            Thread.sleep(1000);</span></span>
+<span class="line"><span>            value = index;</span></span>
+<span class="line"><span>            System.out.println(&quot;写执行时长：&quot; + stopwatch.elapseTime());</span></span>
+<span class="line"><span>        } catch (InterruptedException e) {</span></span>
+<span class="line"><span>            e.printStackTrace();</span></span>
+<span class="line"><span>        } finally {</span></span>
+<span class="line"><span>            lock.unlock();</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public static void main(String[] args) throws InterruptedException {</span></span>
+<span class="line"><span>        final ReadWriteLockDemo demo = new ReadWriteLockDemo();</span></span>
+<span class="line"><span>        Runnable readRunbale = new Runnable() {</span></span>
+<span class="line"><span>            @Override</span></span>
+<span class="line"><span>            public void run() {</span></span>
+<span class="line"><span>                demo.handleRead(readLock);</span></span>
+<span class="line"><span>                //demo.handleRead(lock);</span></span>
+<span class="line"><span>            }</span></span>
+<span class="line"><span>        };</span></span>
+<span class="line"><span>        Runnable writeRunbale = new Runnable() {</span></span>
+<span class="line"><span>            @Override</span></span>
+<span class="line"><span>            public void run() {</span></span>
+<span class="line"><span>                demo.handleWrite(writeLock, new Random().nextInt());</span></span>
+<span class="line"><span>                //demo.handleWrite(lock, new Random().nextInt());</span></span>
+<span class="line"><span>            }</span></span>
+<span class="line"><span>        };</span></span>
+<span class="line"><span>        for (int i = 0; i &lt; 10; i++) {</span></span>
+<span class="line"><span>            Thread t1 = new Thread(readRunbale);</span></span>
+<span class="line"><span>            t1.start();</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>        for (int i = 0; i &lt; 10; i++) {</span></span>
+<span class="line"><span>            Thread t2 = new Thread(writeRunbale);</span></span>
+<span class="line"><span>            t2.start();</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><!--]--></div><div id="codetab-73-4" class="vp-code-tab" role="tabpanel" aria-expanded="false"><div class="vp-code-tab-title"><!--[--><span>倒计时器（线程池执行完成指定线程后执行）</span><!--]--></div><!--[--><div class="language-java line-numbers-mode" data-ext="java" data-title="java"><button class="copy" title="复制代码" data-copied="已复制"></button><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>/**</span></span>
+<span class="line"><span> * 倒计时：线程一个个执行，线程池中的执行完成指定线程后在执行主线程</span></span>
+<span class="line"><span> */</span></span>
+<span class="line"><span>public class CountDownLatchDemo implements Runnable {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    static final CountDownLatch end = new CountDownLatch(5);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    static final CountDownLatchDemo demo = new CountDownLatchDemo();</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @Override</span></span>
+<span class="line"><span>    public void run() {</span></span>
+<span class="line"><span>        try {</span></span>
+<span class="line"><span>            Thread.sleep(new Random().nextInt(10) * 1000);</span></span>
+<span class="line"><span>            System.out.println(&quot;check complete&quot;);</span></span>
+<span class="line"><span>            end.countDown();</span></span>
+<span class="line"><span>        } catch (InterruptedException e) {</span></span>
+<span class="line"><span>            e.printStackTrace();</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public static void main(String[] args) throws InterruptedException {</span></span>
+<span class="line"><span>        ExecutorService exec = Executors.newFixedThreadPool(10);</span></span>
+<span class="line"><span>        for (int i = 0; i &lt; 10; i++) {</span></span>
+<span class="line"><span>            exec.submit(demo);</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>        end.await(); // 等待检查</span></span>
+<span class="line"><span>        System.out.println(&quot;Fire!&quot;);</span></span>
+<span class="line"><span>        exec.shutdown();</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><!--]--></div><div id="codetab-73-5" class="vp-code-tab" role="tabpanel" aria-expanded="false"><div class="vp-code-tab-title"><!--[--><span>循环栏珊</span><!--]--></div><!--[--><div class="language-java line-numbers-mode" data-ext="java" data-title="java"><button class="copy" title="复制代码" data-copied="已复制"></button><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>/**</span></span>
+<span class="line"><span> * 循环栏珊：一种线程的集合</span></span>
+<span class="line"><span> */</span></span>
+<span class="line"><span>public class CyclicBarrierDemo {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public static class Soldier implements Runnable {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        private String soldier;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        private final CyclicBarrier cyclicBarrier;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        public Soldier(CyclicBarrier cyclicBarrier, String soldierName) {</span></span>
+<span class="line"><span>            this.cyclicBarrier = cyclicBarrier;</span></span>
+<span class="line"><span>            this.soldier = soldierName;</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        @Override</span></span>
+<span class="line"><span>        public void run() {</span></span>
+<span class="line"><span>            try {</span></span>
+<span class="line"><span>                cyclicBarrier.await();</span></span>
+<span class="line"><span>                doWork();</span></span>
+<span class="line"><span>            } catch (InterruptedException e) {</span></span>
+<span class="line"><span>                e.printStackTrace();</span></span>
+<span class="line"><span>            } catch (BrokenBarrierException e) {</span></span>
+<span class="line"><span>                e.printStackTrace();</span></span>
+<span class="line"><span>            }</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        void doWork() {</span></span>
+<span class="line"><span>            try {</span></span>
+<span class="line"><span>                Thread.sleep(Math.abs(new Random().nextInt()%10000));</span></span>
+<span class="line"><span>            } catch (InterruptedException e) {</span></span>
+<span class="line"><span>                e.printStackTrace();</span></span>
+<span class="line"><span>            }</span></span>
+<span class="line"><span>            System.out.println(soldier + &quot;:任务完成&quot;);</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public static class BarrierRun implements Runnable {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        boolean flag;</span></span>
+<span class="line"><span>        int N;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        public BarrierRun(boolean flag, int N) {</span></span>
+<span class="line"><span>            this.flag = flag;</span></span>
+<span class="line"><span>            this.N = N;</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        @Override</span></span>
+<span class="line"><span>        public void run() {</span></span>
+<span class="line"><span>            if (flag) {</span></span>
+<span class="line"><span>                System.out.println(&quot;司令:[士兵&quot; + N + &quot;个，任务完成！]&quot;);</span></span>
+<span class="line"><span>            } else {</span></span>
+<span class="line"><span>                System.out.println(&quot;司令:[士兵&quot; + N + &quot;个，集合完毕！]&quot;);</span></span>
+<span class="line"><span>                flag = true;</span></span>
+<span class="line"><span>            }</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public static void main(String[] args) {</span></span>
+<span class="line"><span>        final int N = 10;</span></span>
+<span class="line"><span>        Thread[] allSoldier = new Thread[N];</span></span>
+<span class="line"><span>        boolean flag = false;</span></span>
+<span class="line"><span>        CyclicBarrier cyclicBarrier = new CyclicBarrier(N, new BarrierRun(flag, N));</span></span>
+<span class="line"><span>        System.out.println(&quot;集合队伍！&quot;);</span></span>
+<span class="line"><span>        for (int i = 0; i &lt; N; ++i) {</span></span>
+<span class="line"><span>            System.out.println(&quot;士兵&quot; + i + &quot;报道！&quot;);</span></span>
+<span class="line"><span>            allSoldier[i] = new Thread(new Soldier(cyclicBarrier, &quot;士兵&quot; + i));</span></span>
+<span class="line"><span>            allSoldier[i].start();</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><!--]--></div><div id="codetab-73-6" class="vp-code-tab" role="tabpanel" aria-expanded="false"><div class="vp-code-tab-title"><!--[--><span>线程阻塞</span><!--]--></div><!--[--><div class="language-java line-numbers-mode" data-ext="java" data-title="java"><button class="copy" title="复制代码" data-copied="已复制"></button><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>/**</span></span>
+<span class="line"><span> * 线程阻塞：不需要获取对象</span></span>
+<span class="line"><span> */</span></span>
+<span class="line"><span>public class LockSupportDemo {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public static Object u = new Object();</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    static ChangeObjectThread t1 = new ChangeObjectThread(&quot;t1&quot;);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    static ChangeObjectThread t2 = new ChangeObjectThread(&quot;t2&quot;);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public static class ChangeObjectThread extends Thread {</span></span>
+<span class="line"><span>        public ChangeObjectThread (String name) {</span></span>
+<span class="line"><span>            super.setName(name);</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        @Override</span></span>
+<span class="line"><span>        public void run() {</span></span>
+<span class="line"><span>            synchronized (u) {</span></span>
+<span class="line"><span>                System.out.println(&quot;in: &quot; + getName());</span></span>
+<span class="line"><span>                LockSupport.park();</span></span>
+<span class="line"><span>            }</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public static void main(String[] args) throws InterruptedException {</span></span>
+<span class="line"><span>        t1.start();</span></span>
+<span class="line"><span>        Thread.sleep(100);</span></span>
+<span class="line"><span>        t2.start();</span></span>
+<span class="line"><span>        LockSupport.unpark(t1);</span></span>
+<span class="line"><span>        LockSupport.unpark(t2);</span></span>
+<span class="line"><span>        t1.join();</span></span>
+<span class="line"><span>        t2.join();</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><!--]--></div><!--]--></div></div><!----><!----></div></main><footer class="vp-doc-footer" data-v-111ee9d7 data-v-506b4d71><!--[--><!--]--><!----><div class="contributors" aria-label="Contributors" data-v-506b4d71><span class="contributors-label" data-v-506b4d71>贡献者: </span><span class="contributors-info" data-v-506b4d71><!--[--><!--[--><span class="contributor" data-v-506b4d71>靳琛</span><!----><!--]--><!--]--></span></div><nav class="prev-next" data-v-506b4d71><div class="pager" data-v-506b4d71><a class="vp-link no-icon link pager-link prev" href="/%E8%AF%AD%E8%A8%80/f66uo43m/" data-v-506b4d71 data-v-2871b571><!--[--><span class="desc" data-v-506b4d71>上一页</span><span class="title" data-v-506b4d71>Tomcat</span><!--]--><!----></a></div><div class="pager" data-v-506b4d71><a class="vp-link no-icon link pager-link next" href="/%E8%AF%AD%E8%A8%80/%E7%AE%97%E6%B3%95/" data-v-506b4d71 data-v-2871b571><!--[--><span class="desc" data-v-506b4d71>下一页</span><span class="title" data-v-506b4d71>算法</span><!--]--><!----></a></div></nav></footer><!----><!--[--><!--]--></div></div></div><!--[--><!--]--></div></div><!--]--><button style="display:none;" type="button" class="vp-back-to-top" aria-label="back to top" data-v-6215af77 data-v-4c61d319><span class="percent" data-allow-mismatch data-v-4c61d319>0%</span><span class="show icon vpi-back-to-top" data-v-4c61d319></span><svg aria-hidden="true" data-v-4c61d319><circle cx="50%" cy="50%" data-allow-mismatch style="stroke-dasharray:calc(0% - 12.566370614359172px) calc(314.1592653589793% - 12.566370614359172px);" data-v-4c61d319></circle></svg></button><footer class="vp-footer has-sidebar" vp-footer data-v-6215af77 data-v-499a4984><!--[--><div class="container" data-v-499a4984><p class="message" data-v-499a4984>Powered by <a target="_blank" href="https://v2.vuepress.vuejs.org/">VuePress</a> & <a target="_blank" href="https://theme-plume.vuejs.press">vuepress-theme-plume</a></p><!----></div><!--]--></footer><!--[--><!--]--><!--]--></div><!----><!--]--><!--[--><!--]--><!--]--></div><script type="module" src="/assets/app-CSjlw16A.js" defer></script></body></html>
