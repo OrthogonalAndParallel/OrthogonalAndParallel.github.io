@@ -1,0 +1,1310 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" /><meta name="generator" content="VuePress 2.0.0-rc.18" /><meta name="theme" content="VuePress Theme Plume " /><script id="check-mac-os">document.documentElement.classList.toggle('mac', /Mac|iPhone|iPod|iPad/i.test(navigator.platform))</script><script id="check-dark-mode">;(function () {const um= localStorage.getItem('vuepress-theme-appearance') || 'auto';const sm = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;const isDark = um === 'dark' || (um !== 'light' && sm);document.documentElement.dataset.theme = isDark ? 'dark' : 'light';})();</script><meta property="og:url" content="https://orthogonalandparallel.github.io/%E8%AF%AD%E8%A8%80/%E7%AE%97%E6%B3%95/"><meta property="og:site_name" content="万里任禅游"><meta property="og:title" content="算法"><meta property="og:description" content="数据结构 基础数据结构 应用数据结构 算法 查找 排序"><meta property="og:type" content="article"><meta property="og:locale" content="zh-CN"><meta property="og:updated_time" content="2025-07-05T06:42:56.000Z"><meta property="article:modified_time" content="2025-07-05T06:42:56.000Z"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"算法","image":[""],"dateModified":"2025-07-05T06:42:56.000Z","author":[]}</script><title>算法 | 万里任禅游</title><meta name="description" content="数据结构 基础数据结构 应用数据结构 算法 查找 排序"><link rel="preload" href="/assets/style-C7iXgSGb.css" as="style"><link rel="stylesheet" href="/assets/style-C7iXgSGb.css"><link rel="modulepreload" href="/assets/app-DUomSOUZ.js"><link rel="modulepreload" href="/assets/index.html-o60m5QBN.js"><link rel="prefetch" href="/assets/index.html-BbEkIF3_.js" as="script"><link rel="prefetch" href="/assets/index.html-Qrm5_ekU.js" as="script"><link rel="prefetch" href="/assets/index.html-IuYYJElN.js" as="script"><link rel="prefetch" href="/assets/index.html-BSxN9uOR.js" as="script"><link rel="prefetch" href="/assets/index.html-3So59ogF.js" as="script"><link rel="prefetch" href="/assets/index.html-BbVIaB3j.js" as="script"><link rel="prefetch" href="/assets/index.html-BPSAVru6.js" as="script"><link rel="prefetch" href="/assets/index.html-BDB8eCUq.js" as="script"><link rel="prefetch" href="/assets/index.html-CfFxJDax.js" as="script"><link rel="prefetch" href="/assets/index.html-Ck9XQYYe.js" as="script"><link rel="prefetch" href="/assets/index.html-C0ULmfGk.js" as="script"><link rel="prefetch" href="/assets/index.html-DSES8KCS.js" as="script"><link rel="prefetch" href="/assets/index.html-DaCydiuz.js" as="script"><link rel="prefetch" href="/assets/index.html-e1IDsHbN.js" as="script"><link rel="prefetch" href="/assets/index.html-CHLxntys.js" as="script"><link rel="prefetch" href="/assets/index.html-QUAO-mgV.js" as="script"><link rel="prefetch" href="/assets/index.html-Ypliw2o0.js" as="script"><link rel="prefetch" href="/assets/index.html-DhOYdp2M.js" as="script"><link rel="prefetch" href="/assets/index.html-C0XoCbEf.js" as="script"><link rel="prefetch" href="/assets/index.html-BWYeXQy6.js" as="script"><link rel="prefetch" href="/assets/index.html-DDYBcxtS.js" as="script"><link rel="prefetch" href="/assets/index.html-Bps-Ktyh.js" as="script"><link rel="prefetch" href="/assets/index.html-Idca5uzM.js" as="script"><link rel="prefetch" href="/assets/index.html-BzZTtTsN.js" as="script"><link rel="prefetch" href="/assets/index.html-vIe486Ui.js" as="script"><link rel="prefetch" href="/assets/index.html-CyYTzlTs.js" as="script"><link rel="prefetch" href="/assets/index.html-BfDjtVVc.js" as="script"><link rel="prefetch" href="/assets/index.html-C8NY_5bs.js" as="script"><link rel="prefetch" href="/assets/index.html-DG4EV58l.js" as="script"><link rel="prefetch" href="/assets/index.html-CbTojPjA.js" as="script"><link rel="prefetch" href="/assets/index.html-Hm86yw8h.js" as="script"><link rel="prefetch" href="/assets/index.html-Baw3TO-m.js" as="script"><link rel="prefetch" href="/assets/index.html-6JeHsr2f.js" as="script"><link rel="prefetch" href="/assets/index.html-kztUEBrh.js" as="script"><link rel="prefetch" href="/assets/index.html-DyUKW6W8.js" as="script"><link rel="prefetch" href="/assets/index.html-uBv2LoXs.js" as="script"><link rel="prefetch" href="/assets/index.html-vE2Rsd_F.js" as="script"><link rel="prefetch" href="/assets/index.html-BAuEPwiP.js" as="script"><link rel="prefetch" href="/assets/index.html-D2KtQIBq.js" as="script"><link rel="prefetch" href="/assets/index.html-BN4LHxZz.js" as="script"><link rel="prefetch" href="/assets/index.html-Dg9gpog0.js" as="script"><link rel="prefetch" href="/assets/index.html-DtEMBA0o.js" as="script"><link rel="prefetch" href="/assets/index.html-DIzecONa.js" as="script"><link rel="prefetch" href="/assets/index.html-Bc5SHEjY.js" as="script"><link rel="prefetch" href="/assets/index.html-C4P9J3os.js" as="script"><link rel="prefetch" href="/assets/index.html-CvFQJz46.js" as="script"><link rel="prefetch" href="/assets/index.html-Cftv3lAy.js" as="script"><link rel="prefetch" href="/assets/index.html-l6JbD5-r.js" as="script"><link rel="prefetch" href="/assets/index.html-wU94OMy0.js" as="script"><link rel="prefetch" href="/assets/index.html-BaHlgVyv.js" as="script"><link rel="prefetch" href="/assets/index.html-DsXXW9KW.js" as="script"><link rel="prefetch" href="/assets/index.html-cMSgN4Wz.js" as="script"><link rel="prefetch" href="/assets/index.html-CP2Wwn8F.js" as="script"><link rel="prefetch" href="/assets/index.html-D9296pLE.js" as="script"><link rel="prefetch" href="/assets/index.html-DGwRvwHw.js" as="script"><link rel="prefetch" href="/assets/index.html-DXexUqqs.js" as="script"><link rel="prefetch" href="/assets/index.html-dsKzEZOO.js" as="script"><link rel="prefetch" href="/assets/index.html-Cu_Wi3fJ.js" as="script"><link rel="prefetch" href="/assets/index.html-Ds5cQu3v.js" as="script"><link rel="prefetch" href="/assets/index.html-D2aWhRwh.js" as="script"><link rel="prefetch" href="/assets/index.html-DTU7jKqY.js" as="script"><link rel="prefetch" href="/assets/index.html-BbUroTnz.js" as="script"><link rel="prefetch" href="/assets/index.html-vaj7hlOf.js" as="script"><link rel="prefetch" href="/assets/index.html-DBd7nX48.js" as="script"><link rel="prefetch" href="/assets/index.html-Bepni8tp.js" as="script"><link rel="prefetch" href="/assets/index.html-D2ZkIHPq.js" as="script"><link rel="prefetch" href="/assets/index.html-ULy6kS1w.js" as="script"><link rel="prefetch" href="/assets/index.html-MCMCZCzT.js" as="script"><link rel="prefetch" href="/assets/index.html-DYqDgLB_.js" as="script"><link rel="prefetch" href="/assets/index.html-m-2GroJ6.js" as="script"><link rel="prefetch" href="/assets/index.html-C9Yhw5DE.js" as="script"><link rel="prefetch" href="/assets/index.html-BicKoYGo.js" as="script"><link rel="prefetch" href="/assets/index.html-CV0LxCit.js" as="script"><link rel="prefetch" href="/assets/index.html-DzHB8YGg.js" as="script"><link rel="prefetch" href="/assets/index.html-BjU6095l.js" as="script"><link rel="prefetch" href="/assets/index.html-Cp_KUcpc.js" as="script"><link rel="prefetch" href="/assets/index.html-Q3c2nmE8.js" as="script"><link rel="prefetch" href="/assets/index.html-CLeoHGox.js" as="script"><link rel="prefetch" href="/assets/index.html-DOWgqOhs.js" as="script"><link rel="prefetch" href="/assets/index.html-D9T0NuMa.js" as="script"><link rel="prefetch" href="/assets/index.html-DjwmxT9U.js" as="script"><link rel="prefetch" href="/assets/index.html-cNht1Amf.js" as="script"><link rel="prefetch" href="/assets/index.html-CB6ZR5Mi.js" as="script"><link rel="prefetch" href="/assets/index.html-ECDZNmyA.js" as="script"><link rel="prefetch" href="/assets/index.html-B_XXqcQa.js" as="script"><link rel="prefetch" href="/assets/index.html-BbbUE1Hp.js" as="script"><link rel="prefetch" href="/assets/index.html-DVI1KMK3.js" as="script"><link rel="prefetch" href="/assets/index.html-8emqwcCd.js" as="script"><link rel="prefetch" href="/assets/index.html-CZi5ar3g.js" as="script"><link rel="prefetch" href="/assets/index.html-CfT3fBVX.js" as="script"><link rel="prefetch" href="/assets/index.html-4Uag_dEq.js" as="script"><link rel="prefetch" href="/assets/index.html-I9Ut7fCH.js" as="script"><link rel="prefetch" href="/assets/index.html-CP-aJVl0.js" as="script"><link rel="prefetch" href="/assets/index.html-DkIh3sUL.js" as="script"><link rel="prefetch" href="/assets/index.html-bIBtOwrj.js" as="script"><link rel="prefetch" href="/assets/index.html-D7ClHlw_.js" as="script"><link rel="prefetch" href="/assets/index.html-DzBk2zgK.js" as="script"><link rel="prefetch" href="/assets/index.html-Dp0Z90B_.js" as="script"><link rel="prefetch" href="/assets/index.html-CYq9CNuZ.js" as="script"><link rel="prefetch" href="/assets/index.html-3AYotPHa.js" as="script"><link rel="prefetch" href="/assets/index.html-DXz-sEGN.js" as="script"><link rel="prefetch" href="/assets/index.html-BAEbDwAZ.js" as="script"><link rel="prefetch" href="/assets/index.html-CNz3Yg7v.js" as="script"><link rel="prefetch" href="/assets/index.html-dOHxvaOR.js" as="script"><link rel="prefetch" href="/assets/index.html-DlFlXdpr.js" as="script"><link rel="prefetch" href="/assets/index.html-D2QjOmIl.js" as="script"><link rel="prefetch" href="/assets/index.html-DwCuN-7s.js" as="script"><link rel="prefetch" href="/assets/index.html-XeFancul.js" as="script"><link rel="prefetch" href="/assets/index.html-CVHi2Iaq.js" as="script"><link rel="prefetch" href="/assets/index.html-BL5FwE7F.js" as="script"><link rel="prefetch" href="/assets/index.html-iecxHMwt.js" as="script"><link rel="prefetch" href="/assets/index.html-Djr1SLHf.js" as="script"><link rel="prefetch" href="/assets/index.html-CXZftZhS.js" as="script"><link rel="prefetch" href="/assets/index.html-Dz4KrZLn.js" as="script"><link rel="prefetch" href="/assets/index.html-DKzRHutS.js" as="script"><link rel="prefetch" href="/assets/index.html-BnR5fX-v.js" as="script"><link rel="prefetch" href="/assets/index.html-D06XD1IO.js" as="script"><link rel="prefetch" href="/assets/index.html-Bn2bmlnZ.js" as="script"><link rel="prefetch" href="/assets/index.html-C6zi9vYx.js" as="script"><link rel="prefetch" href="/assets/index.html-CRFK1jo6.js" as="script"><link rel="prefetch" href="/assets/index.html-DaO4rr91.js" as="script"><link rel="prefetch" href="/assets/index.html-AKFKIy9a.js" as="script"><link rel="prefetch" href="/assets/index.html-DFtxpY_A.js" as="script"><link rel="prefetch" href="/assets/index.html-BZxegOKe.js" as="script"><link rel="prefetch" href="/assets/index.html-Ci0VALaI.js" as="script"><link rel="prefetch" href="/assets/index.html-BE1UB7RX.js" as="script"><link rel="prefetch" href="/assets/index.html-AkR9XRCN.js" as="script"><link rel="prefetch" href="/assets/index.html-DZw1NUIN.js" as="script"><link rel="prefetch" href="/assets/index.html-CqaKJFwS.js" as="script"><link rel="prefetch" href="/assets/index.html-CBuxbfqO.js" as="script"><link rel="prefetch" href="/assets/index.html-CfUIxGTK.js" as="script"><link rel="prefetch" href="/assets/index.html-DRw2n3_k.js" as="script"><link rel="prefetch" href="/assets/index.html-GzOF3Enh.js" as="script"><link rel="prefetch" href="/assets/index.html-D8LcKYMv.js" as="script"><link rel="prefetch" href="/assets/index.html-BLTroA8r.js" as="script"><link rel="prefetch" href="/assets/index.html-Ct-Evg--.js" as="script"><link rel="prefetch" href="/assets/index.html-DrX-WtnR.js" as="script"><link rel="prefetch" href="/assets/index.html-QDgXw13x.js" as="script"><link rel="prefetch" href="/assets/404.html-DIiWaqCE.js" as="script"><link rel="prefetch" href="/assets/index.html-BWA7CkBv.js" as="script"><link rel="prefetch" href="/assets/index.html--vDfGDtc.js" as="script"><link rel="prefetch" href="/assets/index.html-c9I39DyO.js" as="script"><link rel="prefetch" href="/assets/index.html-DhbINyju.js" as="script"><link rel="prefetch" href="/assets/photoswipe.esm-GXRgw7eJ.js" as="script"><link rel="prefetch" href="/assets/searchBox-default-DR4PA-H0.js" as="script"><link rel="prefetch" href="/assets/SearchBox-B6TvLcB-.js" as="script"><link rel="prefetch" href="/assets/mermaid.esm.min-ttd_FGs3.js" as="script"><link rel="prefetch" href="/assets/giscus-BZxmVUME.js" as="script"><link rel="prefetch" href="/assets/setupDevtools-7MC2TMWH-DqPeySQ6.js" as="script"></head><body><div id="app"><!--[--><!--[--><div class="theme-plume vp-layout" vp-container data-v-7beadfdb><!--[--><!--[--><!--]--><!--[--><span tabindex="-1" data-v-606afd40></span><a href="#VPContent" class="vp-skip-link visually-hidden" data-v-606afd40> Skip to content </a><!--]--><!----><header class="vp-nav" data-v-7beadfdb data-v-77c32ca3><div class="vp-navbar" vp-navbar data-v-77c32ca3 data-v-65624753><div class="wrapper" data-v-65624753><div class="container" data-v-65624753><div class="title" data-v-65624753><div class="vp-navbar-title has-sidebar" data-v-65624753 data-v-04ea1a0c><a class="vp-link no-icon link title" href="/" data-v-04ea1a0c data-v-5e7b475e><!--[--><!--[--><!--]--><!--[--><!--[--><!--[--><img class="vp-image dark logo" src="/images/logo.png" alt data-v-dc2af7a5><!--]--><!--[--><img class="vp-image light logo" src="/images/logo.png" alt data-v-dc2af7a5><!--]--><!--]--><!--]--><span data-v-04ea1a0c>万里任禅游</span><!--[--><!--]--><!--]--><!----></a></div></div><div class="content" data-v-65624753><div class="content-body" data-v-65624753><!--[--><!--]--><div class="vp-navbar-search search" data-v-65624753><div class="search-wrapper" data-v-7c3abfeb><!----><div id="local-search" data-v-7c3abfeb><button type="button" class="mini-search mini-search-button" aria-label="搜索文档" data-v-7c3abfeb><span class="mini-search-button-container"><svg class="mini-search-search-icon" width="20" height="20" viewBox="0 0 20 20" aria-label="search icon"><path d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z" stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg><span class="mini-search-button-placeholder">搜索文档</span></span><span class="mini-search-button-keys"><kbd class="mini-search-button-key"></kbd><kbd class="mini-search-button-key">K</kbd></span></button></div></div></div><nav aria-labelledby="main-nav-aria-label" class="vp-navbar-menu menu" data-v-65624753 data-v-2f0345cf><span id="main-nav-aria-label" class="visually-hidden" data-v-2f0345cf>Main Navigation</span><!--[--><!--[--><a class="vp-link no-icon link navbar-menu-link" href="/" tabindex="0" data-v-2f0345cf data-v-59b0a992 data-v-5e7b475e><!--[--><!----><span data-v-59b0a992>首页</span><!--]--><!----></a><!--]--><!--[--><a class="vp-link no-icon link navbar-menu-link" href="/blog/" tabindex="0" data-v-2f0345cf data-v-59b0a992 data-v-5e7b475e><!--[--><!----><span data-v-59b0a992>博客</span><!--]--><!----></a><!--]--><!--[--><a class="vp-link no-icon link navbar-menu-link" href="/blog/tags/" tabindex="0" data-v-2f0345cf data-v-59b0a992 data-v-5e7b475e><!--[--><!----><span data-v-59b0a992>标签</span><!--]--><!----></a><!--]--><!--[--><a class="vp-link no-icon link navbar-menu-link" href="/blog/archives/" tabindex="0" data-v-2f0345cf data-v-59b0a992 data-v-5e7b475e><!--[--><!----><span data-v-59b0a992>归档</span><!--]--><!----></a><!--]--><!--[--><div class="vp-flyout vp-navbar-menu-group" data-v-2f0345cf data-v-7b26254e><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-7b26254e><span class="text" data-v-7b26254e><!----><!----><span data-v-7b26254e>笔记</span><span class="vpi-chevron-down text-icon" data-v-7b26254e></span></span></button><div class="menu" data-v-7b26254e><div class="vp-menu" data-v-7b26254e data-v-69087abb><div class="items" data-v-69087abb><!--[--><!--[--><div class="vp-menu-link" data-v-69087abb data-v-7cc96a61><a class="vp-link no-icon link" href="/%E8%AF%AD%E8%A8%80/" data-v-7cc96a61 data-v-5e7b475e><!--[--><!----> 语言<!--]--><!----></a></div><!--]--><!--[--><div class="vp-menu-link" data-v-69087abb data-v-7cc96a61><a class="vp-link no-icon link" href="/%E9%9F%B3%E4%B9%90/" data-v-7cc96a61 data-v-5e7b475e><!--[--><!----> 音乐<!--]--><!----></a></div><!--]--><!--[--><div class="vp-menu-link" data-v-69087abb data-v-7cc96a61><a class="vp-link no-icon link" href="/%E9%98%85%E8%AF%BB/" data-v-7cc96a61 data-v-5e7b475e><!--[--><!----> 阅读<!--]--><!----></a></div><!--]--><!--[--><div class="vp-menu-link" data-v-69087abb data-v-7cc96a61><a class="vp-link no-icon link" href="/%E7%B3%BB%E7%BB%9F/" data-v-7cc96a61 data-v-5e7b475e><!--[--><!----> 系统<!--]--><!----></a></div><!--]--><!--[--><div class="vp-menu-link" data-v-69087abb data-v-7cc96a61><a class="vp-link no-icon link" href="/%E8%BD%AF%E4%BB%B6/" data-v-7cc96a61 data-v-5e7b475e><!--[--><!----> 软件<!--]--><!----></a></div><!--]--><!--[--><div class="vp-menu-link" data-v-69087abb data-v-7cc96a61><a class="vp-link no-icon link" href="/%E8%B4%A6%E5%8F%B7/" data-v-7cc96a61 data-v-5e7b475e><!--[--><!----> 账号<!--]--><!----></a></div><!--]--><!--[--><div class="vp-menu-link" data-v-69087abb data-v-7cc96a61><a class="vp-link no-icon link" href="/%E7%94%A8%E5%8F%8B/" data-v-7cc96a61 data-v-5e7b475e><!--[--><!----> 用友<!--]--><!----></a></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--]--></nav><!----><div class="vp-navbar-appearance appearance" data-v-65624753 data-v-aa3db5d7><button class="vp-switch vp-switch-appearance" type="button" role="switch" title aria-checked="false" data-v-aa3db5d7 data-v-679d05df data-v-dfc18566><span class="check" data-v-dfc18566><span class="icon" data-v-dfc18566><!--[--><span class="vpi-sun sun" data-v-679d05df></span><span class="vpi-moon moon" data-v-679d05df></span><!--]--></span></span></button></div><div class="vp-social-links vp-navbar-social-links social-links" data-v-65624753 data-v-a55b0b2c data-v-1093ca54><!--[--><!--]--></div><div class="vp-flyout vp-navbar-extra extra" data-v-65624753 data-v-75321137 data-v-7b26254e><button type="button" class="button" aria-haspopup="true" aria-expanded="false" aria-label="extra navigation" data-v-7b26254e><span class="vpi-more-horizontal icon" data-v-7b26254e></span></button><div class="menu" data-v-7b26254e><div class="vp-menu" data-v-7b26254e data-v-69087abb><!----><!--[--><!--[--><!----><div class="group" data-v-75321137><div class="item appearance" data-v-75321137><p class="label" data-v-75321137>外观</p><div class="appearance-action" data-v-75321137><button class="vp-switch vp-switch-appearance" type="button" role="switch" title aria-checked="false" data-v-75321137 data-v-679d05df data-v-dfc18566><span class="check" data-v-dfc18566><span class="icon" data-v-dfc18566><!--[--><span class="vpi-sun sun" data-v-679d05df></span><span class="vpi-moon moon" data-v-679d05df></span><!--]--></span></span></button></div></div></div><div class="group" data-v-75321137><div class="item social-links" data-v-75321137><div class="vp-social-links social-links-list" data-v-75321137 data-v-1093ca54><!--[--><!--]--></div></div></div><!--]--><!--]--></div></div></div><!--[--><!--]--><button type="button" class="vp-navbar-hamburger hamburger" aria-label="mobile navigation" aria-expanded="false" aria-controls="nav-screen" data-v-65624753 data-v-c165004c><span class="container" data-v-c165004c><span class="top" data-v-c165004c></span><span class="middle" data-v-c165004c></span><span class="bottom" data-v-c165004c></span></span></button></div></div></div></div><div class="divider" data-v-65624753><div class="divider-line" data-v-65624753></div></div></div><!----></header><div class="vp-local-nav reached-top is-blog" data-v-7beadfdb data-v-f8a098e6><button class="menu" aria-expanded="false" aria-controls="SidebarNav" data-v-f8a098e6><span class="vpi-align-left menu-icon" data-v-f8a098e6></span><span class="menu-text" data-v-f8a098e6>Menu</span></button><div class="vp-local-nav-outline-dropdown" style="--vp-vh:0px;" data-v-f8a098e6 data-v-0b49e64a><button data-v-0b49e64a>返回顶部</button><!----></div></div><aside class="vp-sidebar" vp-sidebar data-v-7beadfdb data-v-9a1c10b9><div class="curtain" data-v-9a1c10b9></div><nav id="SidebarNav" class="nav" aria-labelledby="sidebar-aria-label" tabindex="-1" data-v-9a1c10b9><span id="sidebar-aria-label" class="visually-hidden" data-v-9a1c10b9> Sidebar Navigation </span><!--[--><!--]--><!--[--><div class="no-transition group" data-v-a39a7f1d><section class="vp-sidebar-item sidebar-item level-0 collapsible" data-v-a39a7f1d data-v-a75c43c6><div class="item" role="button" tabindex="0" data-v-a75c43c6><div class="indicator" data-v-a75c43c6></div><!----><h2 class="text" data-v-a75c43c6>写作</h2><div class="caret" role="button" aria-label="toggle section" tabindex="0" data-v-a75c43c6><span class="vpi-chevron-right caret-icon" data-v-a75c43c6></span></div></div><div class="items" data-v-a75c43c6><!--[--><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-a75c43c6 data-v-a75c43c6><div class="item" data-v-a75c43c6><div class="indicator" data-v-a75c43c6></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/Markdown/" data-v-a75c43c6 data-v-5e7b475e><!--[--><p class="text" data-v-a75c43c6>Markdown</p><!--]--><!----></a><!----></div><!----></div><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-a75c43c6 data-v-a75c43c6><div class="item" data-v-a75c43c6><div class="indicator" data-v-a75c43c6></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/UML/" data-v-a75c43c6 data-v-5e7b475e><!--[--><p class="text" data-v-a75c43c6>UML</p><!--]--><!----></a><!----></div><!----></div><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-a75c43c6 data-v-a75c43c6><div class="item" data-v-a75c43c6><div class="indicator" data-v-a75c43c6></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/VuePress/" data-v-a75c43c6 data-v-5e7b475e><!--[--><p class="text" data-v-a75c43c6>VuePress</p><!--]--><!----></a><!----></div><!----></div><!--]--></div></section></div><div class="no-transition group" data-v-a39a7f1d><section class="vp-sidebar-item sidebar-item level-0 collapsible" data-v-a39a7f1d data-v-a75c43c6><div class="item" role="button" tabindex="0" data-v-a75c43c6><div class="indicator" data-v-a75c43c6></div><!----><h2 class="text" data-v-a75c43c6>前端</h2><div class="caret" role="button" aria-label="toggle section" tabindex="0" data-v-a75c43c6><span class="vpi-chevron-right caret-icon" data-v-a75c43c6></span></div></div><div class="items" data-v-a75c43c6><!--[--><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-a75c43c6 data-v-a75c43c6><div class="item" data-v-a75c43c6><div class="indicator" data-v-a75c43c6></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/vm3ncl9p/" data-v-a75c43c6 data-v-5e7b475e><!--[--><p class="text" data-v-a75c43c6>CSS</p><!--]--><!----></a><!----></div><!----></div><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-a75c43c6 data-v-a75c43c6><div class="item" data-v-a75c43c6><div class="indicator" data-v-a75c43c6></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/6k7oeg3e/" data-v-a75c43c6 data-v-5e7b475e><!--[--><p class="text" data-v-a75c43c6>Emment</p><!--]--><!----></a><!----></div><!----></div><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-a75c43c6 data-v-a75c43c6><div class="item" data-v-a75c43c6><div class="indicator" data-v-a75c43c6></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/nohwln5i/" data-v-a75c43c6 data-v-5e7b475e><!--[--><p class="text" data-v-a75c43c6>HTML</p><!--]--><!----></a><!----></div><!----></div><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-a75c43c6 data-v-a75c43c6><div class="item" data-v-a75c43c6><div class="indicator" data-v-a75c43c6></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/ios/" data-v-a75c43c6 data-v-5e7b475e><!--[--><p class="text" data-v-a75c43c6>ios</p><!--]--><!----></a><!----></div><!----></div><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-a75c43c6 data-v-a75c43c6><div class="item" data-v-a75c43c6><div class="indicator" data-v-a75c43c6></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/277es0hv/" data-v-a75c43c6 data-v-5e7b475e><!--[--><p class="text" data-v-a75c43c6>JavaScript</p><!--]--><!----></a><!----></div><!----></div><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-a75c43c6 data-v-a75c43c6><div class="item" data-v-a75c43c6><div class="indicator" data-v-a75c43c6></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/33946322/" data-v-a75c43c6 data-v-5e7b475e><!--[--><p class="text" data-v-a75c43c6>jQuery</p><!--]--><!----></a><!----></div><!----></div><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-a75c43c6 data-v-a75c43c6><div class="item" data-v-a75c43c6><div class="indicator" data-v-a75c43c6></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/9k2npeo9/" data-v-a75c43c6 data-v-5e7b475e><!--[--><p class="text" data-v-a75c43c6>Node.js</p><!--]--><!----></a><!----></div><!----></div><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-a75c43c6 data-v-a75c43c6><div class="item" data-v-a75c43c6><div class="indicator" data-v-a75c43c6></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/vue/" data-v-a75c43c6 data-v-5e7b475e><!--[--><p class="text" data-v-a75c43c6>vue</p><!--]--><!----></a><!----></div><!----></div><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-a75c43c6 data-v-a75c43c6><div class="item" data-v-a75c43c6><div class="indicator" data-v-a75c43c6></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/vku0v8ty/" data-v-a75c43c6 data-v-5e7b475e><!--[--><p class="text" data-v-a75c43c6>Webgl</p><!--]--><!----></a><!----></div><!----></div><!--]--></div></section></div><div class="no-transition group" data-v-a39a7f1d><section class="vp-sidebar-item sidebar-item level-0 collapsible has-active" data-v-a39a7f1d data-v-a75c43c6><div class="item" role="button" tabindex="0" data-v-a75c43c6><div class="indicator" data-v-a75c43c6></div><!----><h2 class="text" data-v-a75c43c6>后端</h2><div class="caret" role="button" aria-label="toggle section" tabindex="0" data-v-a75c43c6><span class="vpi-chevron-right caret-icon" data-v-a75c43c6></span></div></div><div class="items" data-v-a75c43c6><!--[--><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-a75c43c6 data-v-a75c43c6><div class="item" data-v-a75c43c6><div class="indicator" data-v-a75c43c6></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/arthas/" data-v-a75c43c6 data-v-5e7b475e><!--[--><p class="text" data-v-a75c43c6>arthas</p><!--]--><!----></a><!----></div><!----></div><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-a75c43c6 data-v-a75c43c6><div class="item" data-v-a75c43c6><div class="indicator" data-v-a75c43c6></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/wrkofl45/" data-v-a75c43c6 data-v-5e7b475e><!--[--><p class="text" data-v-a75c43c6>设计模式</p><!--]--><!----></a><!----></div><!----></div><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-a75c43c6 data-v-a75c43c6><div class="item" data-v-a75c43c6><div class="indicator" data-v-a75c43c6></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/2gzez6rp/" data-v-a75c43c6 data-v-5e7b475e><!--[--><p class="text" data-v-a75c43c6>Docker</p><!--]--><!----></a><!----></div><!----></div><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-a75c43c6 data-v-a75c43c6><div class="item" data-v-a75c43c6><div class="indicator" data-v-a75c43c6></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/bvk9ikch/" data-v-a75c43c6 data-v-5e7b475e><!--[--><p class="text" data-v-a75c43c6>git</p><!--]--><!----></a><!----></div><!----></div><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-a75c43c6 data-v-a75c43c6><div class="item" data-v-a75c43c6><div class="indicator" data-v-a75c43c6></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/java/" data-v-a75c43c6 data-v-5e7b475e><!--[--><p class="text" data-v-a75c43c6>java</p><!--]--><!----></a><!----></div><!----></div><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-a75c43c6 data-v-a75c43c6><div class="item" data-v-a75c43c6><div class="indicator" data-v-a75c43c6></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/le03nzim/" data-v-a75c43c6 data-v-5e7b475e><!--[--><p class="text" data-v-a75c43c6>jenkins</p><!--]--><!----></a><!----></div><!----></div><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-a75c43c6 data-v-a75c43c6><div class="item" data-v-a75c43c6><div class="indicator" data-v-a75c43c6></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/maven/" data-v-a75c43c6 data-v-5e7b475e><!--[--><p class="text" data-v-a75c43c6>Maven</p><!--]--><!----></a><!----></div><!----></div><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-a75c43c6 data-v-a75c43c6><div class="item" data-v-a75c43c6><div class="indicator" data-v-a75c43c6></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/emiohftn/" data-v-a75c43c6 data-v-5e7b475e><!--[--><p class="text" data-v-a75c43c6>Nginx</p><!--]--><!----></a><!----></div><!----></div><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-a75c43c6 data-v-a75c43c6><div class="item" data-v-a75c43c6><div class="indicator" data-v-a75c43c6></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/q0ogcwzk/" data-v-a75c43c6 data-v-5e7b475e><!--[--><p class="text" data-v-a75c43c6>Python</p><!--]--><!----></a><!----></div><!----></div><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-a75c43c6 data-v-a75c43c6><div class="item" data-v-a75c43c6><div class="indicator" data-v-a75c43c6></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/tftvm23f/" data-v-a75c43c6 data-v-5e7b475e><!--[--><p class="text" data-v-a75c43c6>Regular Expression</p><!--]--><!----></a><!----></div><!----></div><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-a75c43c6 data-v-a75c43c6><div class="item" data-v-a75c43c6><div class="indicator" data-v-a75c43c6></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/rust/" data-v-a75c43c6 data-v-5e7b475e><!--[--><p class="text" data-v-a75c43c6>rust</p><!--]--><!----></a><!----></div><!----></div><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-a75c43c6 data-v-a75c43c6><div class="item" data-v-a75c43c6><div class="indicator" data-v-a75c43c6></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/jze118vy/" data-v-a75c43c6 data-v-5e7b475e><!--[--><p class="text" data-v-a75c43c6>Spring</p><!--]--><!----></a><!----></div><!----></div><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-a75c43c6 data-v-a75c43c6><div class="item" data-v-a75c43c6><div class="indicator" data-v-a75c43c6></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/cudfxc1a/" data-v-a75c43c6 data-v-5e7b475e><!--[--><p class="text" data-v-a75c43c6>SpringBoot</p><!--]--><!----></a><!----></div><!----></div><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-a75c43c6 data-v-a75c43c6><div class="item" data-v-a75c43c6><div class="indicator" data-v-a75c43c6></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/n4ky2ukd/" data-v-a75c43c6 data-v-5e7b475e><!--[--><p class="text" data-v-a75c43c6>SpringCloud</p><!--]--><!----></a><!----></div><!----></div><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-a75c43c6 data-v-a75c43c6><div class="item" data-v-a75c43c6><div class="indicator" data-v-a75c43c6></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/rukomqz0/" data-v-a75c43c6 data-v-5e7b475e><!--[--><p class="text" data-v-a75c43c6>SpringMVC</p><!--]--><!----></a><!----></div><!----></div><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-a75c43c6 data-v-a75c43c6><div class="item" data-v-a75c43c6><div class="indicator" data-v-a75c43c6></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/f66uo43m/" data-v-a75c43c6 data-v-5e7b475e><!--[--><p class="text" data-v-a75c43c6>Tomcat</p><!--]--><!----></a><!----></div><!----></div><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-a75c43c6 data-v-a75c43c6><div class="item" data-v-a75c43c6><div class="indicator" data-v-a75c43c6></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/ocx3onb4/" data-v-a75c43c6 data-v-5e7b475e><!--[--><p class="text" data-v-a75c43c6>WebService</p><!--]--><!----></a><!----></div><!----></div><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-a75c43c6 data-v-a75c43c6><div class="item" data-v-a75c43c6><div class="indicator" data-v-a75c43c6></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" data-v-a75c43c6 data-v-5e7b475e><!--[--><p class="text" data-v-a75c43c6>多线程</p><!--]--><!----></a><!----></div><!----></div><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-a75c43c6 data-v-a75c43c6><div class="item" data-v-a75c43c6><div class="indicator" data-v-a75c43c6></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/%E7%AE%97%E6%B3%95/" data-v-a75c43c6 data-v-5e7b475e><!--[--><p class="text" data-v-a75c43c6>算法</p><!--]--><!----></a><!----></div><!----></div><!--]--></div></section></div><div class="no-transition group" data-v-a39a7f1d><section class="vp-sidebar-item sidebar-item level-0 collapsible" data-v-a39a7f1d data-v-a75c43c6><div class="item" role="button" tabindex="0" data-v-a75c43c6><div class="indicator" data-v-a75c43c6></div><!----><h2 class="text" data-v-a75c43c6>数据库</h2><div class="caret" role="button" aria-label="toggle section" tabindex="0" data-v-a75c43c6><span class="vpi-chevron-right caret-icon" data-v-a75c43c6></span></div></div><div class="items" data-v-a75c43c6><!--[--><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-a75c43c6 data-v-a75c43c6><div class="item" data-v-a75c43c6><div class="indicator" data-v-a75c43c6></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/MySQL/" data-v-a75c43c6 data-v-5e7b475e><!--[--><p class="text" data-v-a75c43c6>MySQL</p><!--]--><!----></a><!----></div><!----></div><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-a75c43c6 data-v-a75c43c6><div class="item" data-v-a75c43c6><div class="indicator" data-v-a75c43c6></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/wl94mew9/" data-v-a75c43c6 data-v-5e7b475e><!--[--><p class="text" data-v-a75c43c6>Oracle</p><!--]--><!----></a><!----></div><!----></div><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-a75c43c6 data-v-a75c43c6><div class="item" data-v-a75c43c6><div class="indicator" data-v-a75c43c6></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/whdcojmu/" data-v-a75c43c6 data-v-5e7b475e><!--[--><p class="text" data-v-a75c43c6>Redis</p><!--]--><!----></a><!----></div><!----></div><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-a75c43c6 data-v-a75c43c6><div class="item" data-v-a75c43c6><div class="indicator" data-v-a75c43c6></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/SQLite/" data-v-a75c43c6 data-v-5e7b475e><!--[--><p class="text" data-v-a75c43c6>SQLite</p><!--]--><!----></a><!----></div><!----></div><!--]--></div></section></div><div class="no-transition group" data-v-a39a7f1d><section class="vp-sidebar-item sidebar-item level-0 collapsible" data-v-a39a7f1d data-v-a75c43c6><div class="item" role="button" tabindex="0" data-v-a75c43c6><div class="indicator" data-v-a75c43c6></div><!----><h2 class="text" data-v-a75c43c6>设计</h2><div class="caret" role="button" aria-label="toggle section" tabindex="0" data-v-a75c43c6><span class="vpi-chevron-right caret-icon" data-v-a75c43c6></span></div></div><div class="items" data-v-a75c43c6><!--[--><div class="vp-sidebar-item sidebar-item level-1 is-link" data-v-a75c43c6 data-v-a75c43c6><div class="item" data-v-a75c43c6><div class="indicator" data-v-a75c43c6></div><!----><a class="vp-link no-icon link link" href="/%E8%AF%AD%E8%A8%80/egtk6lqg/" data-v-a75c43c6 data-v-5e7b475e><!--[--><p class="text" data-v-a75c43c6>Photoshop</p><!--]--><!----></a><!----></div><!----></div><!--]--></div></section></div><!--]--><!--[--><!--]--></nav></aside><!--[--><div id="VPContent" vp-content class="vp-content has-sidebar" data-v-7beadfdb data-v-e5788fb4><div class="has-sidebar has-aside vp-doc-container" data-v-f7d1c4d4><!--[--><!--]--><div class="container" data-v-f7d1c4d4><div class="aside" vp-outline data-v-f7d1c4d4><div class="aside-curtain" data-v-f7d1c4d4></div><div class="aside-container" data-v-f7d1c4d4><div class="aside-content" data-v-f7d1c4d4><div class="vp-doc-aside" data-v-f7d1c4d4 data-v-81bb3e49><!--[--><!--]--><!--[--><!--]--><nav aria-labelledby="doc-outline-aria-label" class="vp-doc-aside-outline" role="navigation" data-v-81bb3e49 data-v-e94412e9><div class="content" data-v-e94412e9><div class="outline-marker" data-v-e94412e9></div><div id="doc-outline-aria-label" aria-level="2" class="outline-title" role="heading" data-v-e94412e9><span data-v-e94412e9>此页内容</span><span class="vpi-print icon" data-v-e94412e9></span></div><ul class="root" data-v-e94412e9 data-v-8c9df580><!--[--><!--]--></ul></div></nav><!--[--><!--]--><div class="spacer" data-v-81bb3e49></div><!--[--><!--]--></div></div></div></div><div class="content" data-v-f7d1c4d4><div class="content-container" data-v-f7d1c4d4><!--[--><!--]--><main class="main" data-v-f7d1c4d4><nav class="vp-breadcrumb" data-v-f7d1c4d4 data-v-65e3036c><ol vocab="https://schema.org/" typeof="BreadcrumbList" data-v-65e3036c><!--[--><li property="itemListElement" typeof="ListItem" data-v-65e3036c><a class="vp-link no-icon link breadcrumb" href="/" property="item" typeof="WebPage" data-v-65e3036c data-v-5e7b475e><!--[-->首页<!--]--><!----></a><span class="vpi-chevron-right" data-v-65e3036c></span><meta property="name" content="首页" data-v-65e3036c><meta property="position" content="1" data-v-65e3036c></li><li property="itemListElement" typeof="ListItem" data-v-65e3036c><span class="vp-link no-icon breadcrumb" href="/" property="item" typeof="WebPage" data-v-65e3036c data-v-5e7b475e><!--[-->后端<!--]--><!----></span><span class="vpi-chevron-right" data-v-65e3036c></span><meta property="name" content="后端" data-v-65e3036c><meta property="position" content="2" data-v-65e3036c></li><li property="itemListElement" typeof="ListItem" data-v-65e3036c><a class="vp-link no-icon link breadcrumb current" href="/%E8%AF%AD%E8%A8%80/%E7%AE%97%E6%B3%95/" property="item" typeof="WebPage" data-v-65e3036c data-v-5e7b475e><!--[-->算法<!--]--><!----></a><!----><meta property="name" content="算法" data-v-65e3036c><meta property="position" content="3" data-v-65e3036c></li><!--]--></ol></nav><!--[--><h1 class="vp-doc-title page-title" data-v-6e6e6c9f>算法 <!----></h1><div class="vp-doc-meta" data-v-6e6e6c9f><p class="reading-time" data-v-6e6e6c9f><span class="vpi-books icon" data-v-6e6e6c9f></span><span data-v-6e6e6c9f>4642字</span><span data-v-6e6e6c9f>约15分钟</span></p><!----><p class="create-time" data-v-6e6e6c9f><span class="vpi-clock icon" data-v-6e6e6c9f></span><span data-v-6e6e6c9f>2025-06-20</span></p></div><!--]--><div class="_%E8%AF%AD%E8%A8%80_%E7%AE%97%E6%B3%95_ external-link-icon-enabled vp-doc plume-content" vp-content data-v-f7d1c4d4><div data-v-f7d1c4d4><h2 id="数据结构" tabindex="-1"><a class="header-anchor" href="#数据结构"><span>数据结构</span></a></h2><h3 id="基础数据结构" tabindex="-1"><a class="header-anchor" href="#基础数据结构"><span>基础数据结构</span></a></h3><div class="vp-code-tabs"><div class="vp-code-tabs-nav" role="tablist"><!--[--><button class="active vp-code-tab-nav" type="button" role="tab" aria-controls="codetab-6-0" aria-selected="true"><!--[--><span>背包</span><!--]--></button><button class="vp-code-tab-nav" type="button" role="tab" aria-controls="codetab-6-1" aria-selected="false"><!--[--><span>定容栈</span><!--]--></button><button class="vp-code-tab-nav" type="button" role="tab" aria-controls="codetab-6-2" aria-selected="false"><!--[--><span>下压栈（数组实现）</span><!--]--></button><button class="vp-code-tab-nav" type="button" role="tab" aria-controls="codetab-6-3" aria-selected="false"><!--[--><span>下压栈（链表实现）</span><!--]--></button><button class="vp-code-tab-nav" type="button" role="tab" aria-controls="codetab-6-4" aria-selected="false"><!--[--><span>队列</span><!--]--></button><button class="vp-code-tab-nav" type="button" role="tab" aria-controls="codetab-6-5" aria-selected="false"><!--[--><span>优先队列</span><!--]--></button><button class="vp-code-tab-nav" type="button" role="tab" aria-controls="codetab-6-6" aria-selected="false"><!--[--><span>二分二叉树</span><!--]--></button><button class="vp-code-tab-nav" type="button" role="tab" aria-controls="codetab-6-7" aria-selected="false"><!--[--><span>平衡二叉树</span><!--]--></button><button class="vp-code-tab-nav" type="button" role="tab" aria-controls="codetab-6-8" aria-selected="false"><!--[--><span>图</span><!--]--></button><!--]--></div><!--[--><div id="codetab-6-0" class="active vp-code-tab" role="tabpanel" aria-expanded="true"><div class="vp-code-tab-title"><!--[--><span>背包</span><!--]--></div><!--[--><div class="language-java line-numbers-mode" data-ext="java" data-title="java"><button class="copy" title="复制代码" data-copied="已复制"></button><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>/**</span></span>
+<span class="line"><span> * 背包</span></span>
+<span class="line"><span> */</span></span>
+<span class="line"><span>public class Bag&lt;Item&gt; implements Iterable&lt;Item&gt; {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private Node first;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private int N; // 维护背包中元素的数量</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private class Node {</span></span>
+<span class="line"><span>        Item item;</span></span>
+<span class="line"><span>        Node next;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 添加元素到背包头部</span></span>
+<span class="line"><span>     * @param item 要添加的元素</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    public void add(Item item) {</span></span>
+<span class="line"><span>        Node oldfirst = first;</span></span>
+<span class="line"><span>        first = new Node();</span></span>
+<span class="line"><span>        first.item = item;</span></span>
+<span class="line"><span>        first.next = oldfirst;</span></span>
+<span class="line"><span>        N++; // 元素数量加一</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 删除背包头部的元素</span></span>
+<span class="line"><span>     * @return 被删除的元素</span></span>
+<span class="line"><span>     * @throws NoSuchElementException 如果背包为空</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    public Item remove() throws NoSuchElementException {</span></span>
+<span class="line"><span>        if (isEmpty()) {</span></span>
+<span class="line"><span>            throw new NoSuchElementException(&quot;Bag is empty&quot;);</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>        Item item = first.item; // 获取头部元素</span></span>
+<span class="line"><span>        first = first.next;    // 移动头指针到下一个节点</span></span>
+<span class="line"><span>        N--; // 元素数量减一</span></span>
+<span class="line"><span>        return item;           // 返回被删除的元素</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 检查背包是否为空</span></span>
+<span class="line"><span>     * @return 如果背包为空则返回 true，否则返回 false</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    public boolean isEmpty() {</span></span>
+<span class="line"><span>        return first == null;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 获取背包中元素的数量</span></span>
+<span class="line"><span>     * @return 元素的数量</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    public int size() {</span></span>
+<span class="line"><span>        return N;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @Override</span></span>
+<span class="line"><span>    public Iterator&lt;Item&gt; iterator() {</span></span>
+<span class="line"><span>        return new ListIterator();</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private class ListIterator implements Iterator&lt;Item&gt; {</span></span>
+<span class="line"><span>        private Node current = first;</span></span>
+<span class="line"><span>        @Override</span></span>
+<span class="line"><span>        public boolean hasNext() {</span></span>
+<span class="line"><span>            return current != null;</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>        @Override</span></span>
+<span class="line"><span>        public Item next() {</span></span>
+<span class="line"><span>            if (!hasNext()) {</span></span>
+<span class="line"><span>                throw new NoSuchElementException();</span></span>
+<span class="line"><span>            }</span></span>
+<span class="line"><span>            Item item = current.item;</span></span>
+<span class="line"><span>            current = current.next;</span></span>
+<span class="line"><span>            return item;</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><!--]--></div><div id="codetab-6-1" class="vp-code-tab" role="tabpanel" aria-expanded="false"><div class="vp-code-tab-title"><!--[--><span>定容栈</span><!--]--></div><!--[--><div class="language-java line-numbers-mode" data-ext="java" data-title="java"><button class="copy" title="复制代码" data-copied="已复制"></button><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>/**</span></span>
+<span class="line"><span> * 定容栈</span></span>
+<span class="line"><span> */</span></span>
+<span class="line"><span>public class FixedCapacityStack&lt;Item&gt; {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private Item[] a;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private int N;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public FixedCapacityStack(int cap) {</span></span>
+<span class="line"><span>        a = (Item[]) new Object[cap];</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public boolean isEmpty() {</span></span>
+<span class="line"><span>        return N == 0;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public int size() {</span></span>
+<span class="line"><span>        return N;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public void push(Item item) {</span></span>
+<span class="line"><span>        if (N == a.length) {</span></span>
+<span class="line"><span>            resize(2 * a.length);</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>        a[N++] = item;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public Item pop() {</span></span>
+<span class="line"><span>        Item item = a[--N];</span></span>
+<span class="line"><span>        a[N] = null; // 游离对象</span></span>
+<span class="line"><span>        if (N &gt; 0 &amp;&amp; N == a.length / 4) {</span></span>
+<span class="line"><span>            resize(a.length/2);</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>        return item;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private void resize(int max) {</span></span>
+<span class="line"><span>        Item[] temp = (Item[]) new Object[max];</span></span>
+<span class="line"><span>        for (int i = 0; i &lt; N; i ++) {</span></span>
+<span class="line"><span>            temp[i] = a[i];</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>        a = temp;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><!--]--></div><div id="codetab-6-2" class="vp-code-tab" role="tabpanel" aria-expanded="false"><div class="vp-code-tab-title"><!--[--><span>下压栈（数组实现）</span><!--]--></div><!--[--><div class="language-java line-numbers-mode" data-ext="java" data-title="java"><button class="copy" title="复制代码" data-copied="已复制"></button><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>/**</span></span>
+<span class="line"><span> * 下压栈（数组实现）</span></span>
+<span class="line"><span> */</span></span>
+<span class="line"><span>public class ResizingArrayStack&lt;Item&gt; {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private Item[] a = (Item[]) new Object[1];</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private int N;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public boolean isEmpty() {</span></span>
+<span class="line"><span>        return N == 0;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public int size() {</span></span>
+<span class="line"><span>        return N;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private void resize(int max) {</span></span>
+<span class="line"><span>        Item[] temp = (Item[]) new Object[max];</span></span>
+<span class="line"><span>        for (int i = 0; i &lt; N; i ++) {</span></span>
+<span class="line"><span>            temp[i] = a[i];</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>        a = temp;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public void push(Item item) {</span></span>
+<span class="line"><span>        if (N == a.length) {</span></span>
+<span class="line"><span>            resize(2 * a.length);</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>        a[N++] = item;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public Item pop() {</span></span>
+<span class="line"><span>        Item item = a[--N];</span></span>
+<span class="line"><span>        a[N] = null; // 游离对象</span></span>
+<span class="line"><span>        if (N &gt; 0 &amp;&amp; N == a.length / 4) {</span></span>
+<span class="line"><span>            resize(a.length/2);</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>        return item;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public Iterator&lt;Item&gt; iterator() {</span></span>
+<span class="line"><span>        return new ReverseArrayIterator();</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private class ReverseArrayIterator implements Iterator&lt;Item&gt; {</span></span>
+<span class="line"><span>        private int i = N;</span></span>
+<span class="line"><span>        public boolean hasNext() { return i &gt; 0; }</span></span>
+<span class="line"><span>        public Item next() {return a[--i];}</span></span>
+<span class="line"><span>        public void  remove() {}</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><!--]--></div><div id="codetab-6-3" class="vp-code-tab" role="tabpanel" aria-expanded="false"><div class="vp-code-tab-title"><!--[--><span>下压栈（链表实现）</span><!--]--></div><!--[--><div class="language-java line-numbers-mode" data-ext="java" data-title="java"><button class="copy" title="复制代码" data-copied="已复制"></button><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>/**</span></span>
+<span class="line"><span> * 下压栈（链表实现）</span></span>
+<span class="line"><span> * @param &lt;Item&gt;</span></span>
+<span class="line"><span> */</span></span>
+<span class="line"><span>public class Stack&lt;Item&gt; {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private Node first;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private int N;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private class Node {</span></span>
+<span class="line"><span>        Item item;</span></span>
+<span class="line"><span>        Node next;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public boolean isEmpty() {</span></span>
+<span class="line"><span>        return first == null;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public int size() {</span></span>
+<span class="line"><span>        return N;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public void push(Item item) {</span></span>
+<span class="line"><span>        Node oldfirst = first;</span></span>
+<span class="line"><span>        first = new Node();</span></span>
+<span class="line"><span>        first.item = item;</span></span>
+<span class="line"><span>        first.next = oldfirst;</span></span>
+<span class="line"><span>        N++;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><!--]--></div><div id="codetab-6-4" class="vp-code-tab" role="tabpanel" aria-expanded="false"><div class="vp-code-tab-title"><!--[--><span>队列</span><!--]--></div><!--[--><div class="language-java line-numbers-mode" data-ext="java" data-title="java"><button class="copy" title="复制代码" data-copied="已复制"></button><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>/**</span></span>
+<span class="line"><span> * 队列</span></span>
+<span class="line"><span> * @param &lt;Item&gt;</span></span>
+<span class="line"><span> */</span></span>
+<span class="line"><span>public class Queue&lt;Item&gt; {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private Node first;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private Node last;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private int N;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private class Node {</span></span>
+<span class="line"><span>        Item item;</span></span>
+<span class="line"><span>        Node next;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public boolean isEmpty() {</span></span>
+<span class="line"><span>        return first == null;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public int size() {</span></span>
+<span class="line"><span>        return N;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public void enqueue(Item item) {</span></span>
+<span class="line"><span>        Node oldlast = last;</span></span>
+<span class="line"><span>        last = new Node();</span></span>
+<span class="line"><span>        last.item = item;</span></span>
+<span class="line"><span>        last.next = null;</span></span>
+<span class="line"><span>        if (isEmpty()) {</span></span>
+<span class="line"><span>            first = last;</span></span>
+<span class="line"><span>        } else {</span></span>
+<span class="line"><span>            oldlast.next = last;</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>        N++;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public Item dequeue() {</span></span>
+<span class="line"><span>        Item item = first.item;</span></span>
+<span class="line"><span>        first = first.next;</span></span>
+<span class="line"><span>        if (isEmpty()) {</span></span>
+<span class="line"><span>            last = null;</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>        N--;</span></span>
+<span class="line"><span>        return item;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><!--]--></div><div id="codetab-6-5" class="vp-code-tab" role="tabpanel" aria-expanded="false"><div class="vp-code-tab-title"><!--[--><span>优先队列</span><!--]--></div><!--[--><div class="language-java line-numbers-mode" data-ext="java" data-title="java"><button class="copy" title="复制代码" data-copied="已复制"></button><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>/**</span></span>
+<span class="line"><span> * 优先队列模板</span></span>
+<span class="line"><span> * 时间复杂度：</span></span>
+<span class="line"><span> * 1、无序数组 插入：1 删除最大元素：N</span></span>
+<span class="line"><span> * 2、有序数组 插入：M 删除最大元素：1</span></span>
+<span class="line"><span> * 3、链表 插入：NlogN 删除最大元素：NlogN</span></span>
+<span class="line"><span> * @param &lt;Key&gt;</span></span>
+<span class="line"><span> */</span></span>
+<span class="line"><span>public class MaxPQExample&lt;Key extends Comparable&lt;Key&gt;&gt; {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public MaxPQExample() {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 创建初始容量为max的优先队列</span></span>
+<span class="line"><span>     * @param max</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    public MaxPQExample(int max) {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 用a中的元素创建优先队列</span></span>
+<span class="line"><span>     * @param a</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    public MaxPQExample(Key[] a) {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 插入元素</span></span>
+<span class="line"><span>     * @param v</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    public void insert(Key v) {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 删除元素</span></span>
+<span class="line"><span>     * @return</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    public Key delMax() {</span></span>
+<span class="line"><span>        return null;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 是否为空</span></span>
+<span class="line"><span>     * @return</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    public boolean isEmpty() {</span></span>
+<span class="line"><span>        return false;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 返回最大元素</span></span>
+<span class="line"><span>     * @return</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    public Key max() {</span></span>
+<span class="line"><span>        return null;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 返回元素个数</span></span>
+<span class="line"><span>     * @return</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    public int size() {</span></span>
+<span class="line"><span>        return 0;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><!--]--></div><div id="codetab-6-6" class="vp-code-tab" role="tabpanel" aria-expanded="false"><div class="vp-code-tab-title"><!--[--><span>二分二叉树</span><!--]--></div><!--[--><div class="language-java line-numbers-mode" data-ext="java" data-title="java"><button class="copy" title="复制代码" data-copied="已复制"></button><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>/**</span></span>
+<span class="line"><span> * 二分二叉树</span></span>
+<span class="line"><span> * 构造说明：小于根节点放左边，大于根节点放右边</span></span>
+<span class="line"><span> * 时间复杂度：随机构建的N个节点的二分二叉树，查找比较次数~2lgN</span></span>
+<span class="line"><span> */</span></span>
+<span class="line"><span>public class BST&lt;Key extends Comparable&lt;Key&gt;, Value&gt; {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private Node root;               // 二叉查找树的根结点</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private class Node {</span></span>
+<span class="line"><span>        private Key key;              // 键</span></span>
+<span class="line"><span>        private Value val;            // 值</span></span>
+<span class="line"><span>        private Node left, right;     // 指向子树的链接</span></span>
+<span class="line"><span>        private int N;                // 以该结点为根的子树中的结点总数</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        public Node(Key key, Value val, int N) {</span></span>
+<span class="line"><span>            this.key = key;</span></span>
+<span class="line"><span>            this.val = val;</span></span>
+<span class="line"><span>            this.N = N;</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public int size() {</span></span>
+<span class="line"><span>        return size(root);</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private int size(Node x) {</span></span>
+<span class="line"><span>        if (x == null) return 0;</span></span>
+<span class="line"><span>        else return x.N;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public Value get(Key key) {</span></span>
+<span class="line"><span>        return get(root, key);</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private Value get(Node x, Key key) {  // 在以x为根结点的子树中查找并返回key所对应的值；</span></span>
+<span class="line"><span>        // 如果找不到则返回null</span></span>
+<span class="line"><span>        if (x == null) return null;</span></span>
+<span class="line"><span>        int cmp = key.compareTo(x.key);</span></span>
+<span class="line"><span>        if (cmp &lt; 0) return get(x.left, key);</span></span>
+<span class="line"><span>        else if (cmp &gt; 0) return get(x.right, key);</span></span>
+<span class="line"><span>        else return x.val;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public void put(Key key, Value val) {  // 查找key，找到则更新它的值，否则为它创建一个新的结点</span></span>
+<span class="line"><span>        root = put(root, key, val);</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private Node put(Node x, Key key, Value val) {</span></span>
+<span class="line"><span>        // 如果key存在于以x为根结点的子树中则更新它的值；</span></span>
+<span class="line"><span>        // 否则将以key和val为键值对的新结点插入到该子树中</span></span>
+<span class="line"><span>        if (x == null) return new Node(key, val, 1);</span></span>
+<span class="line"><span>        int cmp = key.compareTo(x.key);</span></span>
+<span class="line"><span>        if (cmp &lt; 0) x.left = put(x.left, key, val);</span></span>
+<span class="line"><span>        else if (cmp &gt; 0) x.right = put(x.right, key, val);</span></span>
+<span class="line"><span>        else x.val = val;</span></span>
+<span class="line"><span>        x.N = size(x.left) + size(x.right) + 1;</span></span>
+<span class="line"><span>        return x;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public Key max() {</span></span>
+<span class="line"><span>        return max(root).key;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private Node max(Node x) {</span></span>
+<span class="line"><span>        if (x.right == null) return x;</span></span>
+<span class="line"><span>        return max(x.right);</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public Key min() {</span></span>
+<span class="line"><span>        return min(root).key;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private Node min(Node x) {</span></span>
+<span class="line"><span>        if (x.left == null) return x;</span></span>
+<span class="line"><span>        return min(x.left);</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public Key floor(Key key) {</span></span>
+<span class="line"><span>        Node x = floor(root, key);</span></span>
+<span class="line"><span>        if (x == null) return null;</span></span>
+<span class="line"><span>        return x.key;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private Node floor(Node x, Key key) {</span></span>
+<span class="line"><span>        if (x == null) return null;</span></span>
+<span class="line"><span>        int cmp = key.compareTo(x.key);</span></span>
+<span class="line"><span>        if (cmp == 0) return x;</span></span>
+<span class="line"><span>        if (cmp &lt; 0) return floor(x.left, key);</span></span>
+<span class="line"><span>        Node t = floor(x.right, key);</span></span>
+<span class="line"><span>        if (t != null) return t;</span></span>
+<span class="line"><span>        else return x;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public Key select(int k) {</span></span>
+<span class="line"><span>        return select(root, k).key;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private Node select(Node x, int k) {   // 返回排名为k的结点</span></span>
+<span class="line"><span>        if (x == null) return null;</span></span>
+<span class="line"><span>        int t = size(x.left);</span></span>
+<span class="line"><span>        if (t &gt; k) return select(x.left, k);</span></span>
+<span class="line"><span>        else if (t &lt; k) return select(x.right, k - t - 1);</span></span>
+<span class="line"><span>        else return x;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public int rank(Key key) {</span></span>
+<span class="line"><span>        return rank(key, root);</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private int rank(Key key, Node x) {  // 返回以x为根结点的子树中小于x.key的键的数量</span></span>
+<span class="line"><span>        if (x == null) return 0;</span></span>
+<span class="line"><span>        int cmp = key.compareTo(x.key);</span></span>
+<span class="line"><span>        if (cmp &lt; 0) return rank(key, x.left);</span></span>
+<span class="line"><span>        else if (cmp &gt; 0) return 1 + size(x.left) + rank(key, x.right);</span></span>
+<span class="line"><span>        else return size(x.left);</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public void deleteMin() {</span></span>
+<span class="line"><span>        root = deleteMin(root);</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private Node deleteMin(Node x) {</span></span>
+<span class="line"><span>        if (x.left == null) return x.right;</span></span>
+<span class="line"><span>        x.left = deleteMin(x.left);</span></span>
+<span class="line"><span>        x.N = size(x.left) + size(x.right) + 1;</span></span>
+<span class="line"><span>        return x;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public void delete(Key key) {</span></span>
+<span class="line"><span>        root = delete(root, key);</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private Node delete(Node x, Key key) {</span></span>
+<span class="line"><span>        if (x == null) return null;</span></span>
+<span class="line"><span>        int cmp = key.compareTo(x.key);</span></span>
+<span class="line"><span>        if (cmp &lt; 0) x.left = delete(x.left, key);</span></span>
+<span class="line"><span>        else if (cmp &gt; 0) x.right = delete(x.right, key);</span></span>
+<span class="line"><span>        else {</span></span>
+<span class="line"><span>            if (x.right == null) return x.left;</span></span>
+<span class="line"><span>            if (x.left == null) return x.right;</span></span>
+<span class="line"><span>            Node t = x;</span></span>
+<span class="line"><span>            x = min(t.right);  // 请见算法3.3（续2）</span></span>
+<span class="line"><span>            x.right = deleteMin(t.right);</span></span>
+<span class="line"><span>            x.left = t.left;</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>        x.N = size(x.left) + size(x.right) + 1;</span></span>
+<span class="line"><span>        return x;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public Iterable&lt;Key&gt; keys() {</span></span>
+<span class="line"><span>        return keys(min(), max());</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public Iterable&lt;Key&gt; keys(Key lo, Key hi) {</span></span>
+<span class="line"><span>        Queue&lt;Key&gt; queue = new Queue&lt;Key&gt;();</span></span>
+<span class="line"><span>        keys(root, queue, lo, hi);</span></span>
+<span class="line"><span>        return queue;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private void keys(Node x, Queue&lt;Key&gt; queue, Key lo, Key hi) {</span></span>
+<span class="line"><span>        if (x == null) return;</span></span>
+<span class="line"><span>        int cmplo = lo.compareTo(x.key);</span></span>
+<span class="line"><span>        int cmphi = hi.compareTo(x.key);</span></span>
+<span class="line"><span>        if (cmplo &lt; 0) keys(x.left, queue, lo, hi);</span></span>
+<span class="line"><span>        if (cmplo &lt;= 0 &amp;&amp; cmphi &gt;= 0) queue.enqueue(x.key);</span></span>
+<span class="line"><span>        if (cmphi &gt; 0) keys(x.right, queue, lo, hi);</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    // 请见算法3.3（续1）</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    // max()、min()、floor()、ceiling()方法请见算法3.3（续2）</span></span>
+<span class="line"><span>    // select()、rank()方法请见算法3.3（续3）</span></span>
+<span class="line"><span>    // delete()、deleteMin()、deleteMax()方法请见算法3.3（续4）</span></span>
+<span class="line"><span>    // keys()方法请见算法3.3（续5）</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><!--]--></div><div id="codetab-6-7" class="vp-code-tab" role="tabpanel" aria-expanded="false"><div class="vp-code-tab-title"><!--[--><span>平衡二叉树</span><!--]--></div><!--[--><div class="language-java line-numbers-mode" data-ext="java" data-title="java"><button class="copy" title="复制代码" data-copied="已复制"></button><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>/**</span></span>
+<span class="line"><span> * 平衡二叉树</span></span>
+<span class="line"><span> * 目标：N个节点的树，树高为lgN</span></span>
+<span class="line"><span> * 1：2-3查找树</span></span>
+<span class="line"><span> * 2：红黑查找树，两个 2- 表示 3- 的2-3查找树</span></span>
+<span class="line"><span> */</span></span>
+<span class="line"><span>public class RedBlackBST&lt;Key extends Comparable&lt;Key&gt;, Value&gt; {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private static final boolean RED = true;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private static final boolean BLACK = false;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private Node root;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private class Node {</span></span>
+<span class="line"><span>        Key key;</span></span>
+<span class="line"><span>        Value val;</span></span>
+<span class="line"><span>        Node left, right;</span></span>
+<span class="line"><span>        int N;</span></span>
+<span class="line"><span>        boolean color;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        Node(Key key, Value val, int N, boolean color) {</span></span>
+<span class="line"><span>            this.key = key;</span></span>
+<span class="line"><span>            this.val = val;</span></span>
+<span class="line"><span>            this.N = N;</span></span>
+<span class="line"><span>            this.color = color;</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private boolean isRed(Node x) {</span></span>
+<span class="line"><span>        if (x == null) {</span></span>
+<span class="line"><span>            return false;</span></span>
+<span class="line"><span>        } else {</span></span>
+<span class="line"><span>            return x.color == RED;</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 红左旋转</span></span>
+<span class="line"><span>     * @param h</span></span>
+<span class="line"><span>     * @return</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    private Node rotateLeft(Node h) {</span></span>
+<span class="line"><span>        Node x = h.right;</span></span>
+<span class="line"><span>        h.right = x.left;</span></span>
+<span class="line"><span>        x.left = h;</span></span>
+<span class="line"><span>        x.color = h.color;</span></span>
+<span class="line"><span>        h.color = RED;</span></span>
+<span class="line"><span>        x.N = h.N;</span></span>
+<span class="line"><span>        h.N = 1 + size(h.left) + size(h.right);</span></span>
+<span class="line"><span>        return x;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 红佑旋转</span></span>
+<span class="line"><span>     * @param h</span></span>
+<span class="line"><span>     * @return</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    private Node rotateRight(Node h) {</span></span>
+<span class="line"><span>        Node x = h.left;</span></span>
+<span class="line"><span>        h.left = x.right;</span></span>
+<span class="line"><span>        x.right = h;</span></span>
+<span class="line"><span>        x.color = h.color;</span></span>
+<span class="line"><span>        h.color = RED;</span></span>
+<span class="line"><span>        x.N = h.N;</span></span>
+<span class="line"><span>        h.N = 1 + size(h.left) + size(h.right);</span></span>
+<span class="line"><span>        return x;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 分割双红</span></span>
+<span class="line"><span>     * @param h</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    private void flipColors(Node h) {</span></span>
+<span class="line"><span>        h.color = RED;</span></span>
+<span class="line"><span>        h.left.color = BLACK;</span></span>
+<span class="line"><span>        h.right.color = BLACK;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private int size() {</span></span>
+<span class="line"><span>        return size(root);</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private int size(Node x) {</span></span>
+<span class="line"><span>        if (x == null) return 0;</span></span>
+<span class="line"><span>        else return x.N;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public void put(Key key, Value val) {  // 查找key，找到则更新其值，否则为它新建一个结点</span></span>
+<span class="line"><span>        root = put(root, key, val);</span></span>
+<span class="line"><span>        root.color = BLACK;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private Node put(Node h, Key key, Value val) {</span></span>
+<span class="line"><span>        if (h == null)  // 标准的插入操作，和父结点用红链接相连</span></span>
+<span class="line"><span>            return new Node(key, val, 1, RED);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        int cmp = key.compareTo(h.key);</span></span>
+<span class="line"><span>        if (cmp &lt; 0) h.left = put(h.left, key, val);</span></span>
+<span class="line"><span>        else if (cmp &gt; 0) h.right = put(h.right, key, val);</span></span>
+<span class="line"><span>        else h.val = val;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        if (isRed(h.right) &amp;&amp; !isRed(h.left)) h = rotateLeft(h);</span></span>
+<span class="line"><span>        if (isRed(h.left) &amp;&amp; isRed(h.left.left)) h = rotateRight(h);</span></span>
+<span class="line"><span>        if (isRed(h.left) &amp;&amp; isRed(h.right)) flipColors(h);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        h.N = size(h.left) + size(h.right) + 1;</span></span>
+<span class="line"><span>        return h;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><!--]--></div><div id="codetab-6-8" class="vp-code-tab" role="tabpanel" aria-expanded="false"><div class="vp-code-tab-title"><!--[--><span>图</span><!--]--></div><!--[--><div class="language-java line-numbers-mode" data-ext="java" data-title="java"><button class="copy" title="复制代码" data-copied="已复制"></button><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>/**</span></span>
+<span class="line"><span> * @author jinchenj</span></span>
+<span class="line"><span> * @description 图：用临接表表达，程序用由顶点索引的整形链表数组表示</span></span>
+<span class="line"><span> * @create:2024-12-1614:00:11</span></span>
+<span class="line"><span> */</span></span>
+<span class="line"><span>public class Graph {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private final int V;          // 顶点数目</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private int E;                // 边的数目</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private Bag&lt;Integer&gt;[] adj;   // 邻接表</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 创建一个含有  个顶点但不含有边的图</span></span>
+<span class="line"><span>     * @param V</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    Graph(int V) {</span></span>
+<span class="line"><span>        this.V = V;</span></span>
+<span class="line"><span>        this.E = 0;</span></span>
+<span class="line"><span>        adj = (Bag&lt;Integer&gt;[]) new Bag[V];      // 创建邻接表</span></span>
+<span class="line"><span>        for (int v = 0; v &lt; V; v++)             // 将所有链表初始化为空</span></span>
+<span class="line"><span>            adj[v] = new Bag&lt;Integer&gt;();</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 从标准输入流 in 读入一幅图</span></span>
+<span class="line"><span>     * @param in</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    Graph(In in) {</span></span>
+<span class="line"><span>        this(in.readInt());          // 读取V并将图初始化</span></span>
+<span class="line"><span>        int E = in.readInt();        // 读取E</span></span>
+<span class="line"><span>        for (int i = 0; i &lt; E; i++)</span></span>
+<span class="line"><span>        {  // 添加一条边</span></span>
+<span class="line"><span>            int v = in.readInt();        // 读取一个顶点</span></span>
+<span class="line"><span>            int w = in.readInt();        // 读取另一个顶点</span></span>
+<span class="line"><span>            addEdge(v, w);               // 添加一条连接它们的边</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 顶点数</span></span>
+<span class="line"><span>     * @return</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    int V() {</span></span>
+<span class="line"><span>        return V;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 边数</span></span>
+<span class="line"><span>     * @return</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    int E() {</span></span>
+<span class="line"><span>        return E;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 向图中添加一条边 v-w</span></span>
+<span class="line"><span>     * @param v</span></span>
+<span class="line"><span>     * @param w</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    public void addEdge(int v, int w) {</span></span>
+<span class="line"><span>        adj[v].add(w);                            // 将w添加到v的链表中</span></span>
+<span class="line"><span>        adj[w].add(v);                            // 将v添加到w的链表中</span></span>
+<span class="line"><span>        E++;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 和 v 相邻的所有顶点</span></span>
+<span class="line"><span>     * @param v</span></span>
+<span class="line"><span>     * @return</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    Iterable&lt;Integer&gt; adj(int v) {</span></span>
+<span class="line"><span>        return adj[v];</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public String toString() {</span></span>
+<span class="line"><span>        return null;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><!--]--></div><!--]--></div><h3 id="应用数据结构" tabindex="-1"><a class="header-anchor" href="#应用数据结构"><span>应用数据结构</span></a></h3><div class="vp-code-tabs"><div class="vp-code-tabs-nav" role="tablist"><!--[--><button class="active vp-code-tab-nav" type="button" role="tab" aria-controls="codetab-38-0" aria-selected="true"><!--[--><span>自定义计时器</span><!--]--></button><button class="vp-code-tab-nav" type="button" role="tab" aria-controls="codetab-38-1" aria-selected="false"><!--[--><span>可视化累加器</span><!--]--></button><!--]--></div><!--[--><div id="codetab-38-0" class="active vp-code-tab" role="tabpanel" aria-expanded="true"><div class="vp-code-tab-title"><!--[--><span>自定义计时器</span><!--]--></div><!--[--><div class="language-java line-numbers-mode" data-ext="java" data-title="java"><button class="copy" title="复制代码" data-copied="已复制"></button><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>/**</span></span>
+<span class="line"><span> * 自定义计时器</span></span>
+<span class="line"><span> */</span></span>
+<span class="line"><span>public class StopWatch {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private final long start;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public StopWatch() {</span></span>
+<span class="line"><span>        start = System.currentTimeMillis();</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public String getStart() {</span></span>
+<span class="line"><span>        String startStr  = new SimpleDateFormat(&quot;yyyy-MM-dd HH:mm:ss&quot;).format(new Date(start));</span></span>
+<span class="line"><span>        return startStr;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public double elapsedTime () {</span></span>
+<span class="line"><span>        long now = System.currentTimeMillis();</span></span>
+<span class="line"><span>        return (now - start) / 1000.0;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><!--]--></div><div id="codetab-38-1" class="vp-code-tab" role="tabpanel" aria-expanded="false"><div class="vp-code-tab-title"><!--[--><span>可视化累加器</span><!--]--></div><!--[--><div class="language-java line-numbers-mode" data-ext="java" data-title="java"><button class="copy" title="复制代码" data-copied="已复制"></button><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>/**</span></span>
+<span class="line"><span> * 可视化累加器</span></span>
+<span class="line"><span> */</span></span>
+<span class="line"><span>public class VisualAccumlator {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private double x;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private int n;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private double sum;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private double pow2sum;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public VisualAccumlator(int trials, double max) {</span></span>
+<span class="line"><span>        StdDraw.setXscale(0, trials);</span></span>
+<span class="line"><span>        StdDraw.setYscale(0, max);</span></span>
+<span class="line"><span>        StdDraw.setPenRadius(0.005);</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public void addDataValue (double in) {</span></span>
+<span class="line"><span>        x = in;</span></span>
+<span class="line"><span>        n++;</span></span>
+<span class="line"><span>        sum();</span></span>
+<span class="line"><span>        pow2sum();</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        StdDraw.setPenColor(StdDraw.DARK_GRAY);</span></span>
+<span class="line"><span>        StdDraw.point(n, x);</span></span>
+<span class="line"><span>        StdDraw.setPenColor(StdDraw.YELLOW);</span></span>
+<span class="line"><span>        StdDraw.point(n, sum);</span></span>
+<span class="line"><span>        StdDraw.setPenColor(StdDraw.RED);</span></span>
+<span class="line"><span>        StdDraw.point(n, mean() * 1000);</span></span>
+<span class="line"><span>        StdDraw.setPenColor(StdDraw.BLUE);</span></span>
+<span class="line"><span>        StdDraw.point(n, stddev() * 1000);</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 和</span></span>
+<span class="line"><span>     * @return</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    public double sum () {</span></span>
+<span class="line"><span>        sum += x;</span></span>
+<span class="line"><span>        return sum;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 平方和</span></span>
+<span class="line"><span>     * @return</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    public double pow2sum() {</span></span>
+<span class="line"><span>        pow2sum = Math.pow(x - mean(), 2);</span></span>
+<span class="line"><span>        return pow2sum;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 期望</span></span>
+<span class="line"><span>     * @return</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    public double mean () {</span></span>
+<span class="line"><span>        double mean = BigDecimal.valueOf(sum).divide(BigDecimal.valueOf(n), 2).doubleValue();</span></span>
+<span class="line"><span>        return mean;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 标准差</span></span>
+<span class="line"><span>     * @return</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    public double var () {</span></span>
+<span class="line"><span>        double var = pow2sum/n;</span></span>
+<span class="line"><span>        return var;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 方差</span></span>
+<span class="line"><span>      * @return</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    public double stddev () {</span></span>
+<span class="line"><span>        return Math.sqrt(this.var());</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @Override</span></span>
+<span class="line"><span>    public String toString() {</span></span>
+<span class="line"><span>        return &quot;VisualAccumlator{&quot; +</span></span>
+<span class="line"><span>                &quot;x=&quot; + x +</span></span>
+<span class="line"><span>                &quot;, n=&quot; + n +</span></span>
+<span class="line"><span>                &quot;, sum=&quot; + sum +</span></span>
+<span class="line"><span>                &quot;, pow2sum=&quot; + pow2sum +</span></span>
+<span class="line"><span>                &#39;}&#39;;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><!--]--></div><!--]--></div><h2 id="算法" tabindex="-1"><a class="header-anchor" href="#算法"><span>算法</span></a></h2><h3 id="查找" tabindex="-1"><a class="header-anchor" href="#查找"><span>查找</span></a></h3><div class="vp-code-tabs"><div class="vp-code-tabs-nav" role="tablist"><!--[--><button class="active vp-code-tab-nav" type="button" role="tab" aria-controls="codetab-52-0" aria-selected="true"><!--[--><span>二分法查找</span><!--]--></button><!--]--></div><!--[--><div id="codetab-52-0" class="active vp-code-tab" role="tabpanel" aria-expanded="true"><div class="vp-code-tab-title"><!--[--><span>二分法查找</span><!--]--></div><!--[--><div class="language-java line-numbers-mode" data-ext="java" data-title="java"><button class="copy" title="复制代码" data-copied="已复制"></button><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>/**</span></span>
+<span class="line"><span> * 二分法查找</span></span>
+<span class="line"><span> * 时间复杂度：O(log2n)</span></span>
+<span class="line"><span> */</span></span>
+<span class="line"><span>public class BinarySearch {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private int[] a;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public BinarySearch(int[] keys) {</span></span>
+<span class="line"><span>        a = new int[keys.length];</span></span>
+<span class="line"><span>        for (int i = 0; i &lt; keys.length; i++) {</span></span>
+<span class="line"><span>            a[i] = keys[i]; // 保护性复制</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>        Arrays.sort(a);</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public boolean contains(int key) {</span></span>
+<span class="line"><span>        return rank(key) != -1;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 二分法</span></span>
+<span class="line"><span>     * @param key</span></span>
+<span class="line"><span>     * @return</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    private int rank(int key) {</span></span>
+<span class="line"><span>        int lo = 0; // 小索引</span></span>
+<span class="line"><span>        int hi = a.length - 1; // 大索引</span></span>
+<span class="line"><span>        while (lo &lt;= hi) {</span></span>
+<span class="line"><span>            int mid = lo + (hi - lo) / 2; // 中间索引</span></span>
+<span class="line"><span>            if (key &lt; a[mid]) {</span></span>
+<span class="line"><span>                hi = mid - 1;</span></span>
+<span class="line"><span>            } else if (key &gt; a[mid]) {</span></span>
+<span class="line"><span>                lo = mid + 1;</span></span>
+<span class="line"><span>            } else {</span></span>
+<span class="line"><span>                return mid;</span></span>
+<span class="line"><span>            }</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>        return -1;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><!--]--></div><!--]--></div><div class="vp-tabs"><div class="vp-tabs-nav" role="tablist"><!--[--><button class="active vp-tab-nav" type="button" role="tab" aria-controls="tab-57-0" aria-selected="true"><!--[-->二分查找<!--]--></button><button class="vp-tab-nav" type="button" role="tab" aria-controls="tab-57-1" aria-selected="false"><!--[-->二叉查找树（BST）<!--]--></button><button class="vp-tab-nav" type="button" role="tab" aria-controls="tab-57-2" aria-selected="false"><!--[-->红黑树<!--]--></button><!--]--></div><!--[--><div id="tab-57-0" class="active vp-tab" role="tabpanel" aria-expanded="true"><div class="vp-tab-title"><!--[-->二分查找<!--]--></div><!--[--><ul><li>时间复杂度：O(log2n) <img src="/assets/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE-DbG65d2D.gif" alt="二分查找"></li></ul><!--]--></div><div id="tab-57-1" class="vp-tab" role="tabpanel" aria-expanded="false"><div class="vp-tab-title"><!--[-->二叉查找树（BST）<!--]--></div><!--[--><ul><li>时间复杂度：</li><li>查找：平均时间复杂度为 O(log N)，最坏情况下为 O(N)（当树退化为链表时）。</li><li>插入：平均时间复杂度为 O(log N)，最坏情况下为 O(N)。</li><li>删除：平均时间复杂度为 O(log N)，最坏情况下为 O(N) <img src="/assets/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F-9rKS8xnT.gif" alt="插入排序"></li></ul><!--]--></div><div id="tab-57-2" class="vp-tab" role="tabpanel" aria-expanded="false"><div class="vp-tab-title"><!--[-->红黑树<!--]--></div><!--[--><ul><li>时间复杂度：</li><li>查找：平均时间复杂度为 O(log N)</li><li>插入：平均时间复杂度为 O(log N)</li><li>删除：平均时间复杂度为 O(log N) <img src="/assets/%E7%BA%A2%E9%BB%91%E6%A0%91%E6%8F%92%E5%85%A5-BbCiVS6j.webp" alt="红黑树插入"><img src="/assets/%E7%BA%A2%E9%BB%91%E6%A0%91%E6%9F%A5%E6%89%BE-B1ooLi6h.webp" alt="红黑树查找"></li></ul><!--]--></div><!--]--></div><h3 id="排序" tabindex="-1"><a class="header-anchor" href="#排序"><span>排序</span></a></h3><div class="vp-code-tabs"><div class="vp-code-tabs-nav" role="tablist"><!--[--><button class="active vp-code-tab-nav" type="button" role="tab" aria-controls="codetab-119-0" aria-selected="true"><!--[--><span>选择排序</span><!--]--></button><button class="vp-code-tab-nav" type="button" role="tab" aria-controls="codetab-119-1" aria-selected="false"><!--[--><span>插入排序</span><!--]--></button><button class="vp-code-tab-nav" type="button" role="tab" aria-controls="codetab-119-2" aria-selected="false"><!--[--><span>希尔排序</span><!--]--></button><button class="vp-code-tab-nav" type="button" role="tab" aria-controls="codetab-119-3" aria-selected="false"><!--[--><span>并归排序</span><!--]--></button><button class="vp-code-tab-nav" type="button" role="tab" aria-controls="codetab-119-4" aria-selected="false"><!--[--><span>快速排序</span><!--]--></button><!--]--></div><!--[--><div id="codetab-119-0" class="active vp-code-tab" role="tabpanel" aria-expanded="true"><div class="vp-code-tab-title"><!--[--><span>选择排序</span><!--]--></div><!--[--><div class="language-java line-numbers-mode" data-ext="java" data-title="java"><button class="copy" title="复制代码" data-copied="已复制"></button><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>/**</span></span>
+<span class="line"><span> * 选择排序：第i个元素和剩余元素比较选出最小的</span></span>
+<span class="line"><span> * 时间复杂度：上下界 n^2，N^2/2次比较，N次交换，幂函数增长</span></span>
+<span class="line"><span> * 空间复杂度：原地排序算法</span></span>
+<span class="line"><span> */</span></span>
+<span class="line"><span>public class Selection {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 排序</span></span>
+<span class="line"><span>     * @param a</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    public static void sort(Comparable[] a) {</span></span>
+<span class="line"><span>        int N = a.length;</span></span>
+<span class="line"><span>        for (int i = 0; i &lt; N; i++) {</span></span>
+<span class="line"><span>            int min = i;</span></span>
+<span class="line"><span>            for (int j = i+1; j &lt; N; j++) {</span></span>
+<span class="line"><span>                if (less(a[j], a[min])) {</span></span>
+<span class="line"><span>                    min = j;</span></span>
+<span class="line"><span>                }</span></span>
+<span class="line"><span>            }</span></span>
+<span class="line"><span>            exch(a, i, min);</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 判断大小</span></span>
+<span class="line"><span>     * @param v</span></span>
+<span class="line"><span>     * @param w</span></span>
+<span class="line"><span>     * @return</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    private static boolean less(Comparable v, Comparable w) {</span></span>
+<span class="line"><span>        return v.compareTo(w) &lt; 0;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 交换元素</span></span>
+<span class="line"><span>     * @param a</span></span>
+<span class="line"><span>     * @param i</span></span>
+<span class="line"><span>     * @param j</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    private static void exch(Comparable[] a, int i, int j) {</span></span>
+<span class="line"><span>        Comparable t = a[i];</span></span>
+<span class="line"><span>        a[i] = a[j];</span></span>
+<span class="line"><span>        a[j] = t;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 打印数组</span></span>
+<span class="line"><span>     * @param a</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    private static void show(Comparable[] a) {</span></span>
+<span class="line"><span>        for (int i = 0; i &lt; a.length; i++) {</span></span>
+<span class="line"><span>            StdOut.print(a[i] + &quot; &quot;);</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>        StdOut.println();</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 测试数组是否有顺序</span></span>
+<span class="line"><span>     * @param a</span></span>
+<span class="line"><span>     * @return</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    private static boolean isSorted(Comparable[] a) {</span></span>
+<span class="line"><span>        for (int i = 1; i &lt; a.length; i++) {</span></span>
+<span class="line"><span>            if (less(a[i], a[i-1])) {</span></span>
+<span class="line"><span>                return false;</span></span>
+<span class="line"><span>            }</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>        return true;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public static void main(String[] args) {</span></span>
+<span class="line"><span>        String filePath = System.getProperty(&quot;user.dir&quot;) + &quot;/src/txt/&quot; + &quot;Example.txt&quot;;</span></span>
+<span class="line"><span>        String[] a = In.readStrings(filePath);</span></span>
+<span class="line"><span>        sort(a);</span></span>
+<span class="line"><span>        StdOut.println(&quot;是否排序：&quot; + isSorted(a));</span></span>
+<span class="line"><span>        show(a);</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><!--]--></div><div id="codetab-119-1" class="vp-code-tab" role="tabpanel" aria-expanded="false"><div class="vp-code-tab-title"><!--[--><span>插入排序</span><!--]--></div><!--[--><div class="language-java line-numbers-mode" data-ext="java" data-title="java"><button class="copy" title="复制代码" data-copied="已复制"></button><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>/**</span></span>
+<span class="line"><span> * 插入排序：依次判相邻的元素中最小的</span></span>
+<span class="line"><span> * 时间复杂度： 上下界 n^2，平均N^2/4次比较，N^2/4次交换，最坏N^2/2 次比较，N^2/2次交换，最好N-1次比较，0次交换</span></span>
+<span class="line"><span> * 空间复杂度：原地排序算法</span></span>
+<span class="line"><span> * 说明：和集合的初始状态关联性较大</span></span>
+<span class="line"><span> */</span></span>
+<span class="line"><span>public class Insertion {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 排序</span></span>
+<span class="line"><span>     * @param a</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    public static void sort(Comparable[] a) {</span></span>
+<span class="line"><span>        int N = a.length;</span></span>
+<span class="line"><span>        for (int i = 1; i &lt; N; i++) {</span></span>
+<span class="line"><span>            for (int j = i; j &gt;0 &amp;&amp; less(a[j], a[j -1]); j--) {</span></span>
+<span class="line"><span>                exch(a, j, j-1);</span></span>
+<span class="line"><span>            }</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 判断大小</span></span>
+<span class="line"><span>     * @param v</span></span>
+<span class="line"><span>     * @param w</span></span>
+<span class="line"><span>     * @return</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    private static boolean less(Comparable v, Comparable w) {</span></span>
+<span class="line"><span>        return v.compareTo(w) &lt; 0;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 交换元素</span></span>
+<span class="line"><span>     * @param a</span></span>
+<span class="line"><span>     * @param i</span></span>
+<span class="line"><span>     * @param j</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    private static void exch(Comparable[] a, int i, int j) {</span></span>
+<span class="line"><span>        Comparable t = a[i];</span></span>
+<span class="line"><span>        a[i] = a[j];</span></span>
+<span class="line"><span>        a[j] = t;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 打印数组</span></span>
+<span class="line"><span>     * @param a</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    private static void show(Comparable[] a) {</span></span>
+<span class="line"><span>        for (int i = 0; i &lt; a.length; i++) {</span></span>
+<span class="line"><span>            StdOut.print(a[i] + &quot; &quot;);</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>        StdOut.println();</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 测试数组是否有顺序</span></span>
+<span class="line"><span>     * @param a</span></span>
+<span class="line"><span>     * @return</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    private static boolean isSorted(Comparable[] a) {</span></span>
+<span class="line"><span>        for (int i = 1; i &lt; a.length; i++) {</span></span>
+<span class="line"><span>            if (less(a[i], a[i-1])) {</span></span>
+<span class="line"><span>                return false;</span></span>
+<span class="line"><span>            }</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>        return true;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public static void main(String[] args) {</span></span>
+<span class="line"><span>        String filePath = System.getProperty(&quot;user.dir&quot;) + &quot;/src/txt/&quot; + &quot;Example.txt&quot;;</span></span>
+<span class="line"><span>        String[] a = In.readStrings(filePath);</span></span>
+<span class="line"><span>        sort(a);</span></span>
+<span class="line"><span>        StdOut.println(&quot;是否排序：&quot; + isSorted(a));</span></span>
+<span class="line"><span>        show(a);</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><!--]--></div><div id="codetab-119-2" class="vp-code-tab" role="tabpanel" aria-expanded="false"><div class="vp-code-tab-title"><!--[--><span>希尔排序</span><!--]--></div><!--[--><div class="language-java line-numbers-mode" data-ext="java" data-title="java"><button class="copy" title="复制代码" data-copied="已复制"></button><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>/**</span></span>
+<span class="line"><span> * 希尔排序：缩小增量的插入排序</span></span>
+<span class="line"><span> * 时间复杂度：上界 n^(3/2)、下界 n*log2n</span></span>
+<span class="line"><span> * 空间复杂度：原地排序算法</span></span>
+<span class="line"><span> * 说明：在插入排序基础上新增增幅h的概念，大幅提高效率</span></span>
+<span class="line"><span> */</span></span>
+<span class="line"><span>public class Shell {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 排序</span></span>
+<span class="line"><span>     * @param a</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    public static void sort(Comparable[] a) {</span></span>
+<span class="line"><span>        int N = a.length;</span></span>
+<span class="line"><span>        int h = 1;</span></span>
+<span class="line"><span>        while (h &lt; N/3) {</span></span>
+<span class="line"><span>            h = 3*h + 1;</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>        while (h &gt;= 1) {</span></span>
+<span class="line"><span>            for (int i = h; i &lt; N; i++) {</span></span>
+<span class="line"><span>                for (int j = i; j &gt;= h &amp;&amp; less(a[j], a[j-h]); j -= h) {</span></span>
+<span class="line"><span>                    exch(a, j, j-h);</span></span>
+<span class="line"><span>                }</span></span>
+<span class="line"><span>            }</span></span>
+<span class="line"><span>            h = h/3;</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 判断大小</span></span>
+<span class="line"><span>     * @param v</span></span>
+<span class="line"><span>     * @param w</span></span>
+<span class="line"><span>     * @return</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    private static boolean less(Comparable v, Comparable w) {</span></span>
+<span class="line"><span>        return v.compareTo(w) &lt; 0;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 交换元素</span></span>
+<span class="line"><span>     * @param a</span></span>
+<span class="line"><span>     * @param i</span></span>
+<span class="line"><span>     * @param j</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    private static void exch(Comparable[] a, int i, int j) {</span></span>
+<span class="line"><span>        Comparable t = a[i];</span></span>
+<span class="line"><span>        a[i] = a[j];</span></span>
+<span class="line"><span>        a[j] = t;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 打印数组</span></span>
+<span class="line"><span>     * @param a</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    private static void show(Comparable[] a) {</span></span>
+<span class="line"><span>        for (int i = 0; i &lt; a.length; i++) {</span></span>
+<span class="line"><span>            StdOut.print(a[i] + &quot; &quot;);</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>        StdOut.println();</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 测试数组是否有顺序</span></span>
+<span class="line"><span>     * @param a</span></span>
+<span class="line"><span>     * @return</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    private static boolean isSorted(Comparable[] a) {</span></span>
+<span class="line"><span>        for (int i = 1; i &lt; a.length; i++) {</span></span>
+<span class="line"><span>            if (less(a[i], a[i-1])) {</span></span>
+<span class="line"><span>                return false;</span></span>
+<span class="line"><span>            }</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>        return true;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public static void main(String[] args) {</span></span>
+<span class="line"><span>        String filePath = System.getProperty(&quot;user.dir&quot;) + &quot;/src/txt/&quot; + &quot;Example.txt&quot;;</span></span>
+<span class="line"><span>        String[] a = In.readStrings(filePath);</span></span>
+<span class="line"><span>        sort(a);</span></span>
+<span class="line"><span>        StdOut.println(&quot;是否排序：&quot; + isSorted(a));</span></span>
+<span class="line"><span>        show(a);</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><!--]--></div><div id="codetab-119-3" class="vp-code-tab" role="tabpanel" aria-expanded="false"><div class="vp-code-tab-title"><!--[--><span>并归排序</span><!--]--></div><!--[--><div class="language-java line-numbers-mode" data-ext="java" data-title="java"><button class="copy" title="复制代码" data-copied="已复制"></button><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>/**</span></span>
+<span class="line"><span> * 并归排序</span></span>
+<span class="line"><span> * 时间复杂度：NlogN</span></span>
+<span class="line"><span> * 空间复杂度：N</span></span>
+<span class="line"><span> * 说明：</span></span>
+<span class="line"><span> */</span></span>
+<span class="line"><span>public class Merge {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private static Comparable[] aux; // 辅助数组</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 原地并归：将a[lo..mid] 和 a[mid+1..hi] 归并</span></span>
+<span class="line"><span>     * @param a</span></span>
+<span class="line"><span>     * @param lo</span></span>
+<span class="line"><span>     * @param mid</span></span>
+<span class="line"><span>     * @param hi</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    private static void merge(Comparable[] a, int lo, int mid, int hi) {</span></span>
+<span class="line"><span>        int i = lo;</span></span>
+<span class="line"><span>        int j = mid + 1;</span></span>
+<span class="line"><span>        for (int k = lo; k &lt;= hi; k++) {</span></span>
+<span class="line"><span>            aux[k] = a[k];</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>        for (int k = lo; k &lt;= hi; k++) {</span></span>
+<span class="line"><span>            if (i &gt; mid) {</span></span>
+<span class="line"><span>                a[k] = aux[j++];</span></span>
+<span class="line"><span>            } else if (j &gt; hi) {</span></span>
+<span class="line"><span>                a[k] = aux[i++];</span></span>
+<span class="line"><span>            } else if (less(aux[j], aux[i])) {</span></span>
+<span class="line"><span>                a[k] = aux[j++];</span></span>
+<span class="line"><span>            } else {</span></span>
+<span class="line"><span>                a[k] = aux[i++];</span></span>
+<span class="line"><span>            }</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 自上向下的并归排序</span></span>
+<span class="line"><span>     * @param a</span></span>
+<span class="line"><span>     * @param lo</span></span>
+<span class="line"><span>     * @param hi</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    private static void sort(Comparable[] a, int lo, int hi) {</span></span>
+<span class="line"><span>        if (hi &lt;= lo) {</span></span>
+<span class="line"><span>            return;</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>        int mid = lo + (hi - lo) / 2;</span></span>
+<span class="line"><span>        sort(a, lo, mid);</span></span>
+<span class="line"><span>        sort(a, mid+1, hi);</span></span>
+<span class="line"><span>        merge(a, lo, mid, hi);</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 排序</span></span>
+<span class="line"><span>     * @param a</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    public static void sort(Comparable[] a) {</span></span>
+<span class="line"><span>        aux = new Comparable[a.length];</span></span>
+<span class="line"><span>        sort(a, 0, a.length - 1);</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 判断大小</span></span>
+<span class="line"><span>     * @param v</span></span>
+<span class="line"><span>     * @param w</span></span>
+<span class="line"><span>     * @return</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    private static boolean less(Comparable v, Comparable w) {</span></span>
+<span class="line"><span>        return v.compareTo(w) &lt; 0;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 交换元素</span></span>
+<span class="line"><span>     * @param a</span></span>
+<span class="line"><span>     * @param i</span></span>
+<span class="line"><span>     * @param j</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    private static void exch(Comparable[] a, int i, int j) {</span></span>
+<span class="line"><span>        Comparable t = a[i];</span></span>
+<span class="line"><span>        a[i] = a[j];</span></span>
+<span class="line"><span>        a[j] = t;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 打印数组</span></span>
+<span class="line"><span>     * @param a</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    private static void show(Comparable[] a) {</span></span>
+<span class="line"><span>        for (int i = 0; i &lt; a.length; i++) {</span></span>
+<span class="line"><span>            StdOut.print(a[i] + &quot; &quot;);</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>        StdOut.println();</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 测试数组是否有顺序</span></span>
+<span class="line"><span>     * @param a</span></span>
+<span class="line"><span>     * @return</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    private static boolean isSorted(Comparable[] a) {</span></span>
+<span class="line"><span>        for (int i = 1; i &lt; a.length; i++) {</span></span>
+<span class="line"><span>            if (less(a[i], a[i-1])) {</span></span>
+<span class="line"><span>                return false;</span></span>
+<span class="line"><span>            }</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>        return true;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public static void main(String[] args) {</span></span>
+<span class="line"><span>        String filePath = System.getProperty(&quot;user.dir&quot;) + &quot;/src/txt/&quot; + &quot;Example.txt&quot;;</span></span>
+<span class="line"><span>        String[] a = In.readStrings(filePath);</span></span>
+<span class="line"><span>        sort(a);</span></span>
+<span class="line"><span>        StdOut.println(&quot;是否排序：&quot; + isSorted(a));</span></span>
+<span class="line"><span>        show(a);</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><!--]--></div><div id="codetab-119-4" class="vp-code-tab" role="tabpanel" aria-expanded="false"><div class="vp-code-tab-title"><!--[--><span>快速排序</span><!--]--></div><!--[--><div class="language-java line-numbers-mode" data-ext="java" data-title="java"><button class="copy" title="复制代码" data-copied="已复制"></button><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>/**</span></span>
+<span class="line"><span> * 快速排序</span></span>
+<span class="line"><span> * 时间复杂度：NlogN</span></span>
+<span class="line"><span> * 空间复杂度：原地排序</span></span>
+<span class="line"><span> * 说明：循环（按第一个元素切分，左侧是小的，右侧是大的），当两个指针相等时，排序完成。</span></span>
+<span class="line"><span> */</span></span>
+<span class="line"><span>public class Quick {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 切分</span></span>
+<span class="line"><span>     * @param a</span></span>
+<span class="line"><span>     * @param lo</span></span>
+<span class="line"><span>     * @param hi</span></span>
+<span class="line"><span>     * @return</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    private static int partition(Comparable[] a, int lo, int hi) {</span></span>
+<span class="line"><span>        int i = lo, j = hi + 1;</span></span>
+<span class="line"><span>        Comparable v = a[lo];</span></span>
+<span class="line"><span>        while (true) {</span></span>
+<span class="line"><span>            while (less(a[++i], v)) { // 比v小的数不做处理</span></span>
+<span class="line"><span>                if (i == hi) {</span></span>
+<span class="line"><span>                    break;</span></span>
+<span class="line"><span>                }</span></span>
+<span class="line"><span>            }</span></span>
+<span class="line"><span>            while (less(v, a[--j])) { // 比v大的数不做处理</span></span>
+<span class="line"><span>                if (j == lo) {</span></span>
+<span class="line"><span>                    break;</span></span>
+<span class="line"><span>                }</span></span>
+<span class="line"><span>            }</span></span>
+<span class="line"><span>            if (i &gt;= j) { // 索引 i &gt;= j，切分完成</span></span>
+<span class="line"><span>                break;</span></span>
+<span class="line"><span>            }</span></span>
+<span class="line"><span>            exch(a, i, j);</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>        exch(a, lo, j);</span></span>
+<span class="line"><span>        return j;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 快速排序</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    private static void sort(Comparable[] a, int lo, int hi) {</span></span>
+<span class="line"><span>        if (hi &lt;= lo) {</span></span>
+<span class="line"><span>            return;</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>        int j = partition(a, lo, hi);</span></span>
+<span class="line"><span>        sort(a, lo, j-1);</span></span>
+<span class="line"><span>        sort(a, j+1, hi);</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 排序</span></span>
+<span class="line"><span>     * @param a</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    public static void sort(Comparable[] a) {</span></span>
+<span class="line"><span>        StdRandom.shuffle(a);</span></span>
+<span class="line"><span>        sort(a, 0, a.length - 1);</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 判断大小</span></span>
+<span class="line"><span>     * @param v</span></span>
+<span class="line"><span>     * @param w</span></span>
+<span class="line"><span>     * @return</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    private static boolean less(Comparable v, Comparable w) {</span></span>
+<span class="line"><span>        return v.compareTo(w) &lt; 0;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 交换元素</span></span>
+<span class="line"><span>     * @param a</span></span>
+<span class="line"><span>     * @param i</span></span>
+<span class="line"><span>     * @param j</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    private static void exch(Comparable[] a, int i, int j) {</span></span>
+<span class="line"><span>        Comparable t = a[i];</span></span>
+<span class="line"><span>        a[i] = a[j];</span></span>
+<span class="line"><span>        a[j] = t;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 打印数组</span></span>
+<span class="line"><span>     * @param a</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    private static void show(Comparable[] a) {</span></span>
+<span class="line"><span>        for (int i = 0; i &lt; a.length; i++) {</span></span>
+<span class="line"><span>            StdOut.print(a[i] + &quot; &quot;);</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>        StdOut.println();</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 测试数组是否有顺序</span></span>
+<span class="line"><span>     * @param a</span></span>
+<span class="line"><span>     * @return</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    private static boolean isSorted(Comparable[] a) {</span></span>
+<span class="line"><span>        for (int i = 1; i &lt; a.length; i++) {</span></span>
+<span class="line"><span>            if (less(a[i], a[i-1])) {</span></span>
+<span class="line"><span>                return false;</span></span>
+<span class="line"><span>            }</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>        return true;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public static void main(String[] args) {</span></span>
+<span class="line"><span>        String filePath = System.getProperty(&quot;user.dir&quot;) + &quot;/src/txt/&quot; + &quot;Example.txt&quot;;</span></span>
+<span class="line"><span>        String[] a = In.readStrings(filePath);</span></span>
+<span class="line"><span>        sort(a);</span></span>
+<span class="line"><span>        StdOut.println(&quot;是否排序：&quot; + isSorted(a));</span></span>
+<span class="line"><span>        show(a);</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><!--]--></div><!--]--></div><div class="vp-tabs"><div class="vp-tabs-nav" role="tablist"><!--[--><button class="active vp-tab-nav" type="button" role="tab" aria-controls="tab-139-0" aria-selected="true"><!--[-->选择排序<!--]--></button><button class="vp-tab-nav" type="button" role="tab" aria-controls="tab-139-1" aria-selected="false"><!--[-->插入排序<!--]--></button><button class="vp-tab-nav" type="button" role="tab" aria-controls="tab-139-2" aria-selected="false"><!--[-->希尔排序<!--]--></button><button class="vp-tab-nav" type="button" role="tab" aria-controls="tab-139-3" aria-selected="false"><!--[-->并归排序<!--]--></button><button class="vp-tab-nav" type="button" role="tab" aria-controls="tab-139-4" aria-selected="false"><!--[-->快速排序<!--]--></button><!--]--></div><!--[--><div id="tab-139-0" class="active vp-tab" role="tabpanel" aria-expanded="true"><div class="vp-tab-title"><!--[-->选择排序<!--]--></div><!--[--><ul><li>时间复杂度：O(n^2)</li><li>空间复杂度：O(1)</li><li>稳定性：不稳定 <img src="/assets/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F-B8GwndZy.gif" alt="选择排序"></li></ul><!--]--></div><div id="tab-139-1" class="vp-tab" role="tabpanel" aria-expanded="false"><div class="vp-tab-title"><!--[-->插入排序<!--]--></div><!--[--><ul><li>时间复杂度：最坏 O(n<sup>2)、平均O(n</sup>2)、最好 O(n)</li><li>空间复杂度：O(1)</li><li>稳定性：不稳定 <img src="/assets/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F-9rKS8xnT.gif" alt="插入排序"></li></ul><!--]--></div><div id="tab-139-2" class="vp-tab" role="tabpanel" aria-expanded="false"><div class="vp-tab-title"><!--[-->希尔排序<!--]--></div><!--[--><ul><li>时间复杂度：最坏 O(n<sup>1.3)、平均O(n</sup>2)、最好 O(n)</li><li>空间复杂度：O(1)</li><li>稳定性：不稳定 <img src="/assets/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F-CZ-z1IVg.gif" alt="希尔排序"></li></ul><!--]--></div><div id="tab-139-3" class="vp-tab" role="tabpanel" aria-expanded="false"><div class="vp-tab-title"><!--[-->并归排序<!--]--></div><!--[--><ul><li>时间复杂度：最坏 O(nlogn)、平均O(nlogn)、最好 O(nlogn)</li><li>空间复杂度：O(n)</li><li>稳定性：稳定 <img src="/assets/%E5%B9%B6%E5%BD%92%E6%8E%92%E5%BA%8F-Bguw-KQu.gif" alt="并归排序"></li></ul><!--]--></div><div id="tab-139-4" class="vp-tab" role="tabpanel" aria-expanded="false"><div class="vp-tab-title"><!--[-->快速排序<!--]--></div><!--[--><ul><li>时间复杂度：最坏 O(n^2)、平均O(nlogn)、最好 O(nlogn)</li><li>空间复杂度：O(nlogn)</li><li>稳定性：不稳定 <img src="/assets/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F-DD28bswc.gif" alt="快速排序"></li></ul><!--]--></div><!--]--></div></div><!----><!----></div></main><footer class="vp-doc-footer" data-v-f7d1c4d4 data-v-079cf8a7><!--[--><!--]--><!----><div class="contributors" aria-label="Contributors" data-v-079cf8a7><span class="contributors-label" data-v-079cf8a7>贡献者: </span><span class="contributors-info" data-v-079cf8a7><!--[--><!--[--><span class="contributor" data-v-079cf8a7>靳琛</span><!----><!--]--><!--]--></span></div><nav class="prev-next" data-v-079cf8a7><div class="pager" data-v-079cf8a7><a class="vp-link no-icon link pager-link prev" href="/%E8%AF%AD%E8%A8%80/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" data-v-079cf8a7 data-v-5e7b475e><!--[--><span class="desc" data-v-079cf8a7>上一页</span><span class="title" data-v-079cf8a7>多线程</span><!--]--><!----></a></div><div class="pager" data-v-079cf8a7><a class="vp-link no-icon link pager-link next" href="/%E8%AF%AD%E8%A8%80/MySQL/" data-v-079cf8a7 data-v-5e7b475e><!--[--><span class="desc" data-v-079cf8a7>下一页</span><span class="title" data-v-079cf8a7>MySQL</span><!--]--><!----></a></div></nav></footer><!----><!--[--><!--]--></div></div></div><!--[--><!--]--></div></div><!--]--><button style="display:none;" type="button" class="vp-back-to-top" aria-label="back to top" data-v-7beadfdb data-v-dcd41fb5><span class="percent" data-allow-mismatch data-v-dcd41fb5>0%</span><span class="show icon vpi-back-to-top" data-v-dcd41fb5></span><svg aria-hidden="true" data-v-dcd41fb5><circle cx="50%" cy="50%" data-allow-mismatch style="stroke-dasharray:calc(0% - 12.566370614359172px) calc(314.1592653589793% - 12.566370614359172px);" data-v-dcd41fb5></circle></svg></button><footer class="vp-footer has-sidebar" vp-footer data-v-7beadfdb data-v-c4223edb><!--[--><div class="container" data-v-c4223edb><p class="message" data-v-c4223edb>Powered by <a target="_blank" href="https://v2.vuepress.vuejs.org/">VuePress</a> & <a target="_blank" href="https://theme-plume.vuejs.press">vuepress-theme-plume</a></p><!----></div><!--]--></footer><!--[--><!--]--><!--]--></div><!----><!--]--><!--[--><!--]--><!--]--></div><script type="module" src="/assets/app-DUomSOUZ.js" defer></script></body></html>
